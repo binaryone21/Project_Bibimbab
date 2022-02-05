@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* 기타 상담 공통 */
+.bd_base_right {
+	float: right;
+	margin: 5px 0px;
+}
+.bd_base_btns {
+	border: 2px solid #BA131A;
+	border-radius : 8px;
+	background: #BA131A;
+	color: white;
+	font-weight: bold;
+	padding: 2px 10px;
+	margin: 0;
+}
+
+
+/* 기타 상담 List */
+.bd_list {
+	margin: 0px auto;
+	width: 1440px;
+	padding: 0px 120px;
+	height: 700px;
+}
+.bd_list_search {
+	height: 42px;
+}
+.bd_list_searchTotal {
+	position: relative;
+	top: 15px;
+}
+.bd_list_searchType {
+	border: 2px solid #BA131A;
+	border-radius : 8px;
+	padding: 2px 10px;
+	color: #BA131A;
+	font-weight: bold;
+}
+.bd_list_searchText {
+	border: 2px solid #BA131A;
+	border-radius : 8px;
+	background: none;
+	padding: 2px 10px;
+	marign-right: -3px;
+	width: 500px;
+}
+.bd_list_table table {
+	border-collapse : collapse;
+	clear: both;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+.bd_list_table th {
+	font-weight: bold;
+	padding: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.bd_list_table td {
+	padding: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.bd_list_table td :ntn-child(2) {
+	text-align: left ! important;
+}
+.bd_list_navi {
+	margin: 30px auto;
+	width: 200px;
+}
+.bd_list_navi div {
+	float: left;
+	width: 36px;
+	height: 36px;
+	font-size: 18px;
+	text-align: center;
+	line-height: 32px;
+    border: 1px solid #AAAAAA;
+    color: #555555;
+    margin: 1px;
+}
+.bd_list_naviAct {
+	background: #BA131A;
+	color: white !important;
+	border: 1px solid #BA131A !important;
+}
+
+
+
+/* 기타 상담 View */
+.bd_view {
+	margin: 0px auto;
+	width: 1440px;
+	padding: 0px 120px;
+	height: 700px;
+}
+.bd_view_table th {
+	font-size: 25px;
+	text-align: center;
+}
+.bd_view_table td {
+	padding: 10px;
+}
+.bd_view_header {
+	height: 50px;
+	border-top: 2px solid #BA131A;
+	border-bottom: 2px solid #BA131A;
+}
+.bd_view_content {
+	height: 500px;
+	vertical-align: top;
+	border-bottom: 2px solid #BA131A;
+	overflow: hidden;
+}
+
+
+
+/* 기타 상담 Write */
+.bd_write_insertId {
+	border: 2px solid #BA131A;
+	border-radius : 8px;
+	background: none;
+	padding: 2px 10px;
+	marign-right: -3px;
+	width: 100px;
+}
+
+/* 기타 상담 Update */

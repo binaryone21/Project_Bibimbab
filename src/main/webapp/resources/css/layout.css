@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Header */
+.hd_front {
+	width: 100%;
+	min-width: 1440px;
+	height: 120px;
+	padding: 0px 120px;
+	background: white;
+	position: fixed;
+	border-bottom: 1px solid #AAAAAA;
+ 	z-index: 10;
+}
+.hd_main {
+	width: 1200px;
+	margin: 0 auto;
+}
+.hd_log {
+	float: left;
+	margin-top: 10px;
+}
+.hd_log img {
+	width: 300px;
+	height: 100px;
+}
+.hd_naviBar {
+	float: right;
+	margin-top: 50px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+.hd_naviBar button {
+	margin-left: 60px;
+	background: none;
+	border: none;
+	font-weight: bold;
+}
+.hd_naviBar button:focus {
+	outline: none;
+}
+.hd_back {
+	height: 100px;
+}
+
+
+/* Footer */
+.ft_area {
+	min-width:1440px;
+	height: 200px;
+	background: black;
+	margin-top: 100px;
+}
+.ft_main {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	padding: 50px;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+}
+.ft_main div {
+	margin: 6px;
+	font-weight: bold;
+}
+.ft_main div:last-child {
+	margin-top: 12px;
+	font-size: 10px;
+}

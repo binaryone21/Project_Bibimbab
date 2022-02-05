@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* 창업 프로세스 */
+.cp_process {
+	width: 1440px;
+	margin: 100px auto;
+	padding: 0px 90px;
+	height: 400px;
+	text-align: center;
+}
+.cp_processTitle {
+	font-size: 30px;
+	font-weight: bold;
+}
+.cp_processItem {
+	width: 190px;
+	float: left;
+	padding: 0px 20px;
+	height: 100%;
+	margin: 100px auto;
+}
+.cp_processCircle {
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	padding-top: 65px;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;	
+	text-align: center;
+}
+.cp_processArrow {
+	float: left;
+	margin-top: 165px;
+}
+.cp_processStep {
+	margin: 20px auto;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+/* 창업 메뉴얼 */
+.cp_manual {
+	width: 1440px;
+	padding: 0px 120px;
+	margin: 200px auto;
+}
+.cp_manualBody {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.cp_manualItem {
+	width: 390px;
+	text-align: center;
+}
+.cp_manualImage {
+	border-top: 2px solid black;
+	width: 64px;
+	margin: 0 auto;
+	padding: 20px 0px;
+}
+.cp_manualTitle {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.cp_manualText {
+	font-size: 12px;
+}
+.cp_manualTable {
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;
+	border-collapse: collapse;
+}
+.cp_manualTable th {
+	background: #EEEEEE;
+	height: 50px;
+	border: 1px solid #DDDDDD;
+}
+.cp_manualTable td {
+	height: 50px;
+	border: 1px solid #DDDDDD;
+}
+
+
+/* 창업 소개 */
+.cp_Infobanner {
+	position: relative;
+	min-width: 1440px;
+	height: 630px;
+	overflow: hidden;
+	margin-bottom: -100px;
+}
+.cp_InfobannerDark {
+	position: absolute;
+	left: calc(50% - 950px);
+	top: calc(50% - 315px);
+	-webkit-filter: brightness(0.30);
+	filter: brightness(0.30);
+}
+.cp_InfoItem {
+	width: 1200px;
+	height: 430px;
+	margin:100px auto;
+	position: relative;
+	color: white;
+	display: table;
+	font-weight: bold;
+}
+.cp_InfoItem1 {
+	width: 630px;
+	height: 430px;
+	float: left;
+	padding: 165px 10px;
+	text-align: center;
+	background: rgba(00, 125, 00, 0.2);
+}
+.cp_InfoItem2 {
+	width: 570px;
+	height: 215px;
+	float: right;
+	padding: 57px 50px;
+	background: rgba(125, 00, 00, 0.2);
+}
+.cp_InfoItem3 {
+	width: 570px;
+	height: 215px;
+	float: right;
+	padding: 57px 50px;
+	background: rgba(00, 00, 125, 0.2);
+}	
+.cp_InfoTitle {
+	font-size: 30px;
+}
+.cp_InfoText {
+	font-size: 20px;
+}
+.cp_InfoIcon {
+	float: right;
+	position: relative;
+	top: -65px;	
+	-webkit-filter: invert(1);
+}

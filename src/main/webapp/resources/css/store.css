@@ -1,0 +1,89 @@
+@charset "UTF-8";
+.st_store {
+	width: 1440px;
+	padding: 0px 120px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+}
+.st_store img {
+	margin-top: 100px;
+	width: 1200px;
+	height: 100%;
+}
+
+
+/* 배달의 민족 */
+.st_baemin {
+	width: 1440px;
+	padding: 0px 120px;
+	margin: 50px auto;	
+}
+.st_baeminIcon {
+	margin: 100px auto;
+	text-align: center;
+}
+.st_baeminIcon img {
+	width: 400px;
+	height: auto;
+}
+.st_baeminStore {
+	display: flex;
+	flex-wrap: wrap;
+}
+.st_baeminItem {
+	width: 220px;
+	border: 1px solid #40ACB7;
+	background: #40ACB7;
+	border-radius: 10px;
+	color: white;
+	margin: 5px 10px;
+	
+	
+	
+}
+.st_baeminItem img {
+	width: 30px;
+	height: 30px;
+}
+.st_baeminItem span {
+	position: relative;
+	left: 5px;
+	top: 2px;
+}
+
+
+/* 요기요 */
+.st_yogiyo {
+	width: 1440px;
+	padding: 0px 120px;
+	margin: 50px auto;	
+}
+.st_yogiyoIcon {
+	margin: 100px auto;
+	text-align: center;
+}
+.st_yogiyoIcon img {
+	width: 400px;
+	height: auto;
+}
+.st_yogiyoStore {
+	display: flex;
+	flex-wrap: wrap;
+}
+.st_yogiyoItem {
+	width: 220px;
+	border: 1px solid #E01123;
+	border-radius: 10px;
+	margin: 5px 10px;
+}
+.st_yogiyoItem img {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+}
+.st_yogiyoItem span {
+	position: relative;
+	left: 5px;
+	top: 2px;
+}
