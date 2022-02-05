@@ -1,4 +1,4 @@
-package kr.co.bibimbab.board;
+package seunghee.toy.bibimbab.board;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.co.bibimbab.vo.BoardVO;
+import seunghee.toy.bibimbab.vo.BoardVO;
 
 @Service
 public class BoardService {

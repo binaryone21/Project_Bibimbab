@@ -4,13 +4,13 @@
 
 	<!-- 상단 배너 -->
 	<article class="bs_banner">
-		<img src="resources/img/board/mainBanner.jpg">
+		<img src="/img/board/mainBanner.jpg">
 	</article>
 	
 	<!-- 기타 상담 -->
 	<article class="bs_info">
 		<div class="bs_infoIcon">
-			<img src="resources/img/base/infoIcon.png">
+			<img src="/img/base/infoIcon.png">
 		</div>
 		<div class="bs_infoText">
 			<span>기타상담</span>

@@ -1,4 +1,4 @@
-package kr.co.bibimbab.board;
+package seunghee.toy.bibimbab.board;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import kr.co.bibimbab.vo.BoardVO;
+import seunghee.toy.bibimbab.vo.BoardVO;
 
 @Controller
 public class BoardController {
@@ -20,7 +20,7 @@ public class BoardController {
 	private BoardService bdSer;
 	
 	/* 기타상담 목록	*/
-	@RequestMapping(value="/BoardList.do", method=RequestMethod.GET)
+	@RequestMapping(value="/BoardList", method=RequestMethod.GET)
 	public ModelAndView boardList(String searchType, String searchText, String pageNO) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("bdList",  bdSer.listVOBoard(searchType, searchText, pageNO));
@@ -30,7 +30,7 @@ public class BoardController {
 	}
 	
 	/* 기타상담 상세보기 */
-	@RequestMapping(value="/BoardView.do", method=RequestMethod.GET)
+	@RequestMapping(value="/BoardView", method=RequestMethod.GET)
 	public ModelAndView boardView(String SEQNO) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("bdOne", bdSer.selectBoard(SEQNO));
@@ -39,13 +39,13 @@ public class BoardController {
 	}
 	
 	/* 기타상담 추가하기 */
-	@RequestMapping("/BoardWrite.do")
+	@RequestMapping("/BoardWrite")
 	public String boardWrite() {
 		return "board/boardWrite.tiles";
 	}
 	
 	/* 기타상담 추가완료 */
-	@RequestMapping("/BoardWriteOK.do")
+	@RequestMapping("/BoardWriteOK")
 	public ModelAndView boardWriteOK(ModelAndView mv, BoardVO boardVO) {
 		mv.setViewName("board/boardList.tiles");
 		mv.addObject("bdOne", bdSer.insertBoard(boardVO));
@@ -53,13 +53,13 @@ public class BoardController {
 	}
 	
 	/* 기타상담 수정하기 */
-	@RequestMapping("/BoardUpdate.do")
+	@RequestMapping("/BoardUpdate")
 	public String boardUpdate(String CP, String SEQNO) {
 		return "board/boardUpdate.tiles";
 	}
 	
 	/* 기타상담 수정등록 */
-	@RequestMapping("/BoardUpdateOK.do")
+	@RequestMapping("/BoardUpdateOK")
 	public ModelAndView boardUpdateOK(ModelAndView mv, BoardVO boardVO) {
 		mv.setViewName("board/boardList.tiles");
 		mv.addObject("bdVO", bdSer.updateBoard());
@@ -67,7 +67,7 @@ public class BoardController {
 	}
 	
 	/* 기타상담 삭제하기 */
-	@RequestMapping("/BoardDelete.do")
+	@RequestMapping("/BoardDelete")
 	public String boardDelete(String CP, String SEQNO) {
 		bdSer.deleteBoard();
 		return "board/boardDelete.tiles";
@@ -75,7 +75,7 @@ public class BoardController {
 	
 	// 컨트롤러에서 파라미터 받으려면 ?? 되나??
 	@ResponseBody
-	@RequestMapping("/sampleSample.do")
+	@RequestMapping("/sampleSample")
 	public String sample(HttpServletRequest request, HttpServletResponse response) {
 		String param = ServletRequestUtils.getStringParameter(request, "pageNO", "");
 		return param;

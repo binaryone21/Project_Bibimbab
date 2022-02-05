@@ -1,4 +1,4 @@
-package kr.co.bibimbab.store;
+package seunghee.toy.bibimbab.store;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ public class StoreController {
 	@Autowired
 	private StoreService stSer;
 	
-	@RequestMapping("/Store.do")
+	@RequestMapping("/Store")
 	public ModelAndView store() {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("stListBM", stSer.listVOStore("1"));

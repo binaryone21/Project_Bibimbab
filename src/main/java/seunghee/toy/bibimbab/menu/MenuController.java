@@ -1,4 +1,4 @@
-package kr.co.bibimbab.menu;
+package seunghee.toy.bibimbab.menu;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ public class MenuController {
 	@Autowired
 	private MenuService mnSer;
 	
-	@RequestMapping("/Menu.do")
+	@RequestMapping("/Menu")
 	public ModelAndView menu() {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("mnListBBB", 	mnSer.listVOMenu("1"));

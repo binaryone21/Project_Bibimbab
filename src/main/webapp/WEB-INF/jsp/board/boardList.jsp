@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!-- BoardList 페이지 JavaScript 설정 -->
-<script src="resources/js/board/boardList.js" defer></script>
+<script src="/js/board/boardList.js" defer></script>
 <!-- BoardList 페이지 변수 설정 -->
 <input type="hidden" id="bdCount" value="${bdCount}">
 
@@ -13,13 +13,13 @@
 
 	<!-- 상단 배너 -->
 	<article class="bs_banner">
-		<img src="resources/img/board/mainBanner.jpg">
+		<img src="/img/board/mainBanner.jpg">
 	</article>
 
 	<!-- 기타 상담 -->
 	<article class="bs_info">
 		<div class="bs_infoIcon">
-			<img src="resources/img/base/infoIcon.png">
+			<img src="/img/base/infoIcon.png">
 		</div>
 		<div class="bs_infoText">
 			<span>기타상담</span>
@@ -91,3 +91,6 @@
 		</div>
 	</article>
 </section>
+
+<!-- Board List 페이지 js 설정 -->
+<script src="/js/board/boardList.js" defer></script>

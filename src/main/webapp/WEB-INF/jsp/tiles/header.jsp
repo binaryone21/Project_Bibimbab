@@ -1,11 +1,11 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 헤더 부분 -->
 <header>
 	<div class="hd_front">
 		<div class="hd_main">
 			<div id="mainLog" class="hd_log">
-				<img src="resources/img/layout/headerLog.png"/>
+				<img src="/img/layout/headerLog.png"/>
 			</div>
 			<div class="hd_naviBar">
 				<button type="button" id="naviBrand">브랜드 스토리</button>

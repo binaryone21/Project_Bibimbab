@@ -1,17 +1,20 @@
-package kr.co.bibimbab.store;
+package seunghee.toy.bibimbab.store;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
-import kr.co.bibimbab.vo.StoreVO;
+import seunghee.toy.bibimbab.vo.StoreVO;
 
 @Repository
-public class StoreDao extends EgovAbstractMapper{
+public class StoreDao {
+
+	@Autowired
+	SqlSession sqlSession;
 
 	/* 해당하는 조건의 Store List 조회 */
 	public List<StoreVO> listVOStore(String BRAND) {
-		return selectList("stMap.listVOStore", BRAND);
+		return sqlSession.selectList("stMap.listVOStore", BRAND);
 	}
 }

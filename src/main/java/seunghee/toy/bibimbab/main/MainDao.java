@@ -1,17 +1,12 @@
-package kr.co.bibimbab.main;
+package seunghee.toy.bibimbab.main;
 
-import javax.annotation.Resource;
-
-import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
-
 @Repository("MainDao")
-public class MainDao extends EgovAbstractMapper {
+public class MainDao {
 
-	@Resource(name="sqlSession")
-	public void setSqlSessionFactory(SqlSessionFactory sqlSession) {
-		super.setSqlSessionFactory(sqlSession);
-	}
+	@Autowired
+	SqlSession sqlSession;
 }

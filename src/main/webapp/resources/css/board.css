@@ -60,7 +60,7 @@
 	padding: 5px;
 	border-bottom: 1px solid #CCCCCC;
 }
-.bd_list_table td :ntn-child(2) {
+.bd_list_table td:ntn-child(2) {
 	text-align: left ! important;
 }
 .bd_list_navi {

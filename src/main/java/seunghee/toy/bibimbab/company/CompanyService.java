@@ -1,12 +1,11 @@
-package kr.co.bibimbab.company;
+package seunghee.toy.bibimbab.company;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("CompanyService")
 public class CompanyService {
 
-	@Resource(name="CompanyDao")
+	@Autowired
 	private CompanyDao companyDao;
 }

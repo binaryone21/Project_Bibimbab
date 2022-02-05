@@ -1,4 +1,4 @@
-package kr.co.bibimbab.vo;
+package seunghee.toy.bibimbab.vo;
 
 public class StoreVO {
 

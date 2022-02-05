@@ -1,11 +1,11 @@
-package kr.co.bibimbab.store;
+package seunghee.toy.bibimbab.store;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.co.bibimbab.vo.StoreVO;
+import seunghee.toy.bibimbab.vo.StoreVO;
 
 @Service
 public class StoreService {

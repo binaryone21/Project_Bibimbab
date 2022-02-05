@@ -1,17 +1,12 @@
-package kr.co.bibimbab.brand;
+package seunghee.toy.bibimbab.brand;
 
-import javax.annotation.Resource;
-
-import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
-
 @Repository("BrandDao")
-public class BrandDao extends EgovAbstractMapper {
+public class BrandDao {
 
-	@Resource(name="sqlSession")
-	public void setSqlSessionFactory(SqlSessionFactory sqlSession) {
-		super.setSqlSessionFactory(sqlSession);
-	}
+	@Autowired
+	private SqlSession sqlSession;
 }

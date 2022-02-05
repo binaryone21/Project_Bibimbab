@@ -1,7 +1,6 @@
-package kr.co.bibimbab.main;
+package seunghee.toy.bibimbab.main;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 
 	
-	@Resource(name="MainService")
+	@Autowired
 	private MainService mainService;
 	
-	@RequestMapping("/Main.do") // 여기가 메인 페이지입니다.
+	@RequestMapping("/") // 여기가 메인 페이지입니다.
 	public String main() {
 		return "main/main.tiles";
 	}

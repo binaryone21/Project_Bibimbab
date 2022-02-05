@@ -4,7 +4,7 @@
 
 	<!-- 상단 배너 -->
 	<article class="bs_banner">
-		<img src="resources/img/brand/mainBanner.jpg">
+		<img src="/img/brand/mainBanner.jpg">
 	</article>
 
 	<!-- 브랜드 이야기 -->
@@ -44,7 +44,7 @@
 				<div class="br_introSubHat"></div>
 				<div class="br_introSubTitle">엄선한 <b>최고급 재료</b></div>
 				<div class="br_introSubImage">
-					<img src="resources/img/brand/introImage1.png">
+					<img src="/img/brand/introImage1.png">
 				</div>
 				<div class="br_introSubText">
 					<span><b>신선한 최고등급의 재료</b>만 사용해 음식을 만듭니다.<br>좋은재료가 좋은 음식, 맛있는 음식을 만듭니다.</span>
@@ -54,7 +54,7 @@
 				<div class="br_introSubHat"></div>
 				<div class="br_introSubTitle">자체개발한 <b>특별 레시피</b></div>
 				<div class="br_introSubImage">
-					<img src="resources/img/brand/introImage2.png">
+					<img src="/img/brand/introImage2.png">
 				</div>
 				<div class="br_introSubText">
 					<span>자체적으로 개발한 <b>특별 레시피</b>로<br>어디서도 맛보지 못한 새로운 맛을 보여드립니다.</span>
@@ -64,7 +64,7 @@
 				<div class="br_introSubHat"></div>
 				<div class="br_introSubTitle">체계적인 <b>매장 교육 시스템</b></div>
 				<div class="br_introSubImage">
-					<img src="resources/img/brand/introImage3.png">
+					<img src="/img/brand/introImage3.png">
 				</div>
 				<div class="br_introSubText">
 					<span>확실하고 체계적인 <b>매장 직원 교육 시스템</b>으로<br>창업 시 서비스 교육에 대한 걱정을 덜어드립니다.</span>

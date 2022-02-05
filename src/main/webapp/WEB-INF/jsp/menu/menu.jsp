@@ -8,13 +8,13 @@
 
 	<!-- 상단 배너 -->
 	<article class="bs_banner">
-		<img src="resources/img/menu/mainBanner.jpg">
+		<img src="/img/menu/mainBanner.jpg">
 	</article>
 	
 	<!-- 메뉴 안내 -->
 	<article class="bs_info">
 		<div class="bs_infoIcon">
-			<img src="resources/img/base/infoIcon.png">
+			<img src="/img/base/infoIcon.png">
 		</div>
 		<div class="bs_infoText">
 			<span>메뉴안내</span>
@@ -23,7 +23,7 @@
 
 	<!-- 레시피 -->	
 	<article class="mn_recipe">
-		<img src="resources/img/menu/recipe.png">
+		<img src="/img/menu/recipe.png">
 		<div class="mn_recipeText">
 			<b><span style="color:#BA131A">특별한 레시피</span>로 만든</b><br>맛있는 밥상, 꼬기비빔밥 전문점입니다.
 		</div>
@@ -36,7 +36,7 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneBBB" items="${mnListBBB}">
 				<div class="mn_menuItem">
-					<div><img src="resources/img/menu/${mnOneBBB.IMG}.png"></div>
+					<div><img src="/img/menu/${mnOneBBB.IMG}.png"></div>
 					<div>${mnOneBBB.NAME}</div>
 				</div>
 			</c:forEach>
@@ -49,7 +49,7 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneJS" items="${mnListJS}">
 				<div class="mn_menuItem">
-					<div><img src="resources/img/menu/${mnOneJS.IMG}.png"></div>
+					<div><img src="/img/menu/${mnOneJS.IMG}.png"></div>
 					<div>${mnOneJS.NAME}</div>
 				</div>
 			</c:forEach>
@@ -62,7 +62,7 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneDB" items="${mnListDB}">
 				<div class="mn_menuItem">
-					<div><img src="resources/img/menu/${mnOneDB.IMG}.png"></div>
+					<div><img src="/img/menu/${mnOneDB.IMG}.png"></div>
 					<div>${mnOneDB.NAME}</div>
 				</div>
 			</c:forEach>				
@@ -75,7 +75,7 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneDGS" items="${mnListDGS}">
 				<div class="mn_menuItem">
-					<div><img src="resources/img/menu/${mnOneDGS.IMG}.png"></div>
+					<div><img src="/img/menu/${mnOneDGS.IMG}.png"></div>
 					<div>${mnOneDGS.NAME}</div>
 				</div>
 			</c:forEach>	
