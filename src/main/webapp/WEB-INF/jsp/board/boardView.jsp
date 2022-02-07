@@ -67,6 +67,3 @@
 		</div>
 	</article>
 </section>
-
-<!-- Board View 페이지 js 설정 -->
-<script src="/js/board/boardView.js" defer></script>

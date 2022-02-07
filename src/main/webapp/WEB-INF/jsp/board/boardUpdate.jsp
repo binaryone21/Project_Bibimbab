@@ -1,4 +1,11 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"	uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" 	uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!-- BoardUpdate 페이지 JavaScript 설정 -->
+<script src="/js/board/boardUpdate.js" defer></script>
+
 <!-- 기타 상담 수정 -->
 <section class="bs_body">
 
@@ -35,18 +42,18 @@
 				</colgroup>
 				<tbody>
 					<tr class="bd_view_header">
-						<th>제목</th>
-						<td>123</td>
-						<th>작성자</th>
-						<td>user</td>
-						<th>작성일</th>
-						<td>2021</td>
-						<th>방문수</th>
-						<td>21</td>
+						<th>Title</th>
+						<td>${bdOne.TITLE}</td>
+						<th>Writer</th>
+						<td>${bdOne.REG_ID}</td>
+						<th>Date</th>
+						<td>${bdOne.REG_DATE}</td>
+						<th>Visit</th>
+						<td>${bdOne.VISIT}</td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6" id="content">ㅁㄴㅇㅁㄴㅇ</td>
+						<td colspan="6" id="content">${bdOne.CONTENTS}</td>
 						<td></td>
 					</tr>		 
 				</tbody>

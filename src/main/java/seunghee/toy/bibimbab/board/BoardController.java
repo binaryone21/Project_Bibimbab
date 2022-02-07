@@ -22,20 +22,20 @@ public class BoardController {
 	/* 기타상담 목록	*/
 	@RequestMapping(value="/BoardList", method=RequestMethod.GET)
 	public ModelAndView boardList(String searchType, String searchText, String pageNO) {
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("bdList",  bdSer.listVOBoard(searchType, searchText, pageNO));
-		mav.addObject("bdCount", bdSer.selectBoardSeqnoCount(searchType, searchText));
-		mav.setViewName("board/boardList.tiles");
-		return mav;
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("bdList",  bdSer.listVOBoard(searchType, searchText, pageNO));
+		mv.addObject("bdCount", bdSer.selectBoardSeqnoCount(searchType, searchText));
+		mv.setViewName("board/boardList.tiles");
+		return mv;
 	}
 	
 	/* 기타상담 상세보기 */
 	@RequestMapping(value="/BoardView", method=RequestMethod.GET)
 	public ModelAndView boardView(String SEQNO) {
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("bdOne", bdSer.selectBoard(SEQNO));
-		mav.setViewName("board/boardView.tiles");
-		return mav;
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
+		mv.setViewName("board/boardView.tiles");
+		return mv;
 	}
 	
 	/* 기타상담 추가하기 */
@@ -54,8 +54,11 @@ public class BoardController {
 	
 	/* 기타상담 수정하기 */
 	@RequestMapping("/BoardUpdate")
-	public String boardUpdate(String CP, String SEQNO) {
-		return "board/boardUpdate.tiles";
+	public ModelAndView boardUpdate(String CP, String SEQNO) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
+		mv.setViewName("board/boardUpdate.tiles");
+		return mv;
 	}
 	
 	/* 기타상담 수정등록 */

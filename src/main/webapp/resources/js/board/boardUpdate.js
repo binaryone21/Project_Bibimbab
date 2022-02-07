@@ -7,7 +7,7 @@
 /*** Event ************************************************************/
 
 	// 기타상담 수정하기
-	$('#boardUpdate').on('click', () => { location.href = "/BoardUpdate?SEQNO=" + boardNo })
+	$('#boardUpdateOK').on('click', () => { location.href = "/BoardUpdateOk?SEQNO=" + boardNo })
 	
 
 /*** Function *********************************************************/
