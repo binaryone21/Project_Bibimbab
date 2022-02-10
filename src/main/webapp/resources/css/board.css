@@ -125,3 +125,10 @@
 }
 
 /* 기타 상담 Update */
+.bd_view_header input {
+	width : 450px;
+	margin-right : 0px;
+}
+.bd_view_content textarea {
+
+}
