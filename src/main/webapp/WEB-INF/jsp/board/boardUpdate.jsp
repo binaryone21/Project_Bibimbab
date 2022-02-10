@@ -28,22 +28,22 @@
 	<article class="bd_view">
 	
 		<!-- 상담 상세보기 테이블 -->
-		<div>
+		<form id="bd_update_form">
 			<table class="bd_view_table">
 				<colgroup>
 					<col style="width:100px">
-					<col style="width:700px">
+					<col style="width:470px">
 					<col style="width:100px">
+					<col style="width:150px">
 					<col style="width:100px">
+					<col style="width:120px">
 					<col style="width:100px">
-					<col style="width:100px">
-					<col style="width:100px">
-					<col style="width:100px">
+					<col style="width:60px">
 				</colgroup>
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td>${bdOne.TITLE}</td>
+						<td><input type="text" style="width:450px; margin-right:0px" value="${bdOne.TITLE}"></td>
 						<th>Writer</th>
 						<td>${bdOne.REG_ID}</td>
 						<th>Date</th>
@@ -53,15 +53,17 @@
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6" id="content">${bdOne.CONTENTS}</td>
+						<td colspan="6" id="content">
+							<textarea cols="136" rows="19"> ${bdOne.CONTENTS} </textarea>
+						</td>
 						<td></td>
-					</tr>		 
+					</tr>
 				</tbody>
 			</table>
-		</div>
+		</form>
 		
 		<!-- 상담 업데이트 버튼 -->
-		<div class="bd_base_rightBot">
+		<div class="bd_base_right">
 			<span><button type="button" class="bd_base_btns bs_focusNone" id="boardUpdateOK">등록하기</button></span>
 		</div>
 	</article>
