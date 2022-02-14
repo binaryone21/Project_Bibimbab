@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import seunghee.toy.bibimbab.vo.BoardVO;
 
+@RequestMapping(value="/board")
 @Controller
 public class BoardController {
 
@@ -20,7 +21,7 @@ public class BoardController {
 	private BoardService bdSer;
 	
 	/* 기타상담 목록	*/
-	@RequestMapping(value="/BoardList", method=RequestMethod.GET)
+	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView boardList(String searchType, String searchText, String pageNO) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bdList",  bdSer.listVOBoard(searchType, searchText, pageNO));
@@ -30,7 +31,7 @@ public class BoardController {
 	}
 	
 	/* 기타상담 상세보기 */
-	@RequestMapping(value="/BoardView", method=RequestMethod.GET)
+	@RequestMapping(value="/view", method=RequestMethod.GET)
 	public ModelAndView boardView(String SEQNO) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
@@ -39,13 +40,13 @@ public class BoardController {
 	}
 	
 	/* 기타상담 추가하기 */
-	@RequestMapping("/BoardWrite")
+	@RequestMapping("/write")
 	public String boardWrite() {
 		return "board/boardWrite.tiles";
 	}
 	
 	/* 기타상담 추가완료 */
-	@RequestMapping("/BoardWriteOK")
+	@RequestMapping("/writeOK")
 	public ModelAndView boardWriteOK(ModelAndView mv, BoardVO boardVO) {
 		mv.setViewName("board/boardList.tiles");
 		mv.addObject("bdOne", bdSer.insertBoard(boardVO));
@@ -53,7 +54,7 @@ public class BoardController {
 	}
 	
 	/* 기타상담 수정하기 */
-	@RequestMapping("/BoardUpdate")
+	@RequestMapping("/update")
 	public ModelAndView boardUpdate(String CP, String SEQNO) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
@@ -61,16 +62,18 @@ public class BoardController {
 		return mv;
 	}
 	
-	/* 기타상담 수정등록 */
-	@RequestMapping("/BoardUpdateOK")
-	public ModelAndView boardUpdateOK(ModelAndView mv, BoardVO boardVO) {
-		mv.setViewName("board/boardList.tiles");
-		mv.addObject("bdVO", bdSer.updateBoard());
-		return mv;
+	/* 기타상담 수정완료 */
+	@RequestMapping("/updateOK")
+	public String boardUpdateOK(BoardVO boardVO) {
+		if(bdSer.updateBoard(boardVO)) {
+			return "redirect:/board/view?SEQNO=" + boardVO.getSEQNO();
+		} else {
+			return "redirect:/board/update?SEQNO=" + boardVO.getSEQNO() + "&state=error";
+		}
 	}
 	
 	/* 기타상담 삭제하기 */
-	@RequestMapping("/BoardDelete")
+	@RequestMapping("/delete")
 	public String boardDelete(String CP, String SEQNO) {
 		bdSer.deleteBoard();
 		return "board/boardDelete.tiles";

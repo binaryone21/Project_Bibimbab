@@ -10,7 +10,7 @@ public class CompanyController {
 	@Autowired
 	private CompanyService companyService;
 	
-	@RequestMapping("/Company")
+	@RequestMapping("/company")
 	public String company() {
 		return "company/company.tiles";
 	}

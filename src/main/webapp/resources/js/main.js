@@ -1,3 +1,3 @@
-$('#goBrand').on('click', () => { location.href = "/Brand" });
-$('#goMenu').on('click', () => { location.href = "/Menu" });
-$('#goCompany').on('click', () => { location.href = "/Company" });
+$('#goBrand').on('click', () => { location.href = "/brand" });
+$('#goMenu').on('click', () => { location.href = "/menu" });
+$('#goCompany').on('click', () => { location.href = "/company" });

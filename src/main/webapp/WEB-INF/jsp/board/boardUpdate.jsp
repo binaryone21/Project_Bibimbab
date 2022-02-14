@@ -43,7 +43,7 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" id="bd_update_title" value="${bdOne.TITLE}"></td>
+						<td><input type="text" name="TITLE" value="${bdOne.TITLE}"></td>
 						<th>Writer</th>
 						<td>${bdOne.REG_ID}</td>
 						<th>Date</th>
@@ -53,19 +53,19 @@
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6" id="content">
-							<textarea id="bd_update_content" cols="136" rows="19"> ${bdOne.CONTENTS} </textarea>
+						<td colspan="6">
+							<textarea name="CONTENTS" cols="136" rows="19">${bdOne.CONTENTS}</textarea>
 						</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="hidden" id="SEQNO">
+			<input type="hidden" name="SEQNO" id="bd_update_SEQNO">
 		</form>
 		
 		<!-- 상담 업데이트 버튼 -->
 		<div class="bd_base_right">
-			<span><button type="button" class="bd_base_btns bs_focusNone" id="boardUpdateOK">수정완료</button></span>
+			<span><button type="button" class="bd_base_btns bs_focusNone" id="updateOkBtn">수정완료</button></span>
 		</div>
 	</article>
 </section>

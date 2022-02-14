@@ -51,15 +51,15 @@
 	
 	// 검색조건을 통한 BoardList 조회
 	function searchList() {
-		location.href = '/BoardList?searchType="'+$('#searchType').val()+'"&searchText="'+$('#searchText').val()+'"&pageNO="'+boardSearch.pageNO+'"';
+		location.href = '/board/list?searchType="'+$('#searchType').val()+'"&searchText="'+$('#searchText').val()+'"&pageNO="'+boardSearch.pageNO+'"';
 	}
 	
 	// BoardView 로 이동
 	function goView() {
-		location.href = '/BoardView?SEQNO="'+$(this).find('.js_bdSEQNO').text()+'"';
+		location.href = '/board/view?SEQNO="'+$(this).find('.js_bdSEQNO').text()+'"';
 	}
 	
 	// BoardWrite 로 이동
 	function goWrite() {
-		location.href = "/BoardWrite";
+		location.href = "/board/write";
 	}

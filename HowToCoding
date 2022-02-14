@@ -7,3 +7,11 @@ CSS 가 BoardView 와 맞지 않음 이것들 수정
 
 
 코드했던것 다시 복기하면서 반복숙달 및 정리
+
+seqno 프론트단에서는 boardNO 로 보이게 하자
+대문자 최대한 줄일까? URL 에서도
+/로 다 쳐서 대문자 없에보자
+
+
+
+boardUpdate maxHight 랑 minHight 설정

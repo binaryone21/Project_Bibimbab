@@ -11,7 +11,7 @@ public class MenuController {
 	@Autowired
 	private MenuService mnSer;
 	
-	@RequestMapping("/Menu")
+	@RequestMapping("/menu")
 	public ModelAndView menu() {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("mnListBBB", 	mnSer.listVOMenu("1"));

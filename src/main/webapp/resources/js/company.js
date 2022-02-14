@@ -1,1 +1,1 @@
-$('#goStore').on('click', () => { location.href = "/Store" });
+$('#goStore').on('click', () => { location.href = "/store" });

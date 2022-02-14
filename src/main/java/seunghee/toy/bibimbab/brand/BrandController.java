@@ -10,7 +10,7 @@ public class BrandController {
 	@Autowired
 	private BrandService brandService;
 	
-	@RequestMapping("/Brand")
+	@RequestMapping("/brand")
 	public String brand() {
 		return "brand/brand.tiles";
 	}

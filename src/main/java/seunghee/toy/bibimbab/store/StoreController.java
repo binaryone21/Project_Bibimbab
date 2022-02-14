@@ -11,7 +11,7 @@ public class StoreController {
 	@Autowired
 	private StoreService stSer;
 	
-	@RequestMapping("/Store")
+	@RequestMapping("/store")
 	public ModelAndView store() {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("stListBM", stSer.listVOStore("1"));

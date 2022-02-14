@@ -29,8 +29,8 @@ public class BoardDao {
 		return sqlSession.insert("bdMap.insertBoard", boardVO);
 	}
 	
-	public int updateBoard() {
-		return sqlSession.update("bdMap.updateBoard");
+	public int updateBoard(BoardVO boardVO) {
+		return sqlSession.update("bdMap.updateBoard", boardVO);
 	}
 	
 	public int deleteBoard() {

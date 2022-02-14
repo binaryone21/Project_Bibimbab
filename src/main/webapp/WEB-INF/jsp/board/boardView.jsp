@@ -53,17 +53,19 @@
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6" id="content">${bdOne.CONTENTS}</td>
+						<td colspan="6">${bdOne.CONTENTS}</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
+			<input type="hidden" id="bd_secretNo" value=${bdOne.SECRET_NO}>
 		</div>
 		
 		<!-- 상담 상세보기 버튼 -->
 		<div class="bd_base_right">
-			<span><button type="button" class="bd_base_btns bs_focusNone" id="boardUpdate">수정하기</button></span>
-			<span><button type="button" class="bd_base_btns bs_focusNone" id="boardDelete">삭제하기</button></span>
+			<span><input type="text" id="bd_userNo"></span>
+			<span><button type="button" class="bd_base_btns bs_focusNone" id="updateBtn">수정하기</button></span>
+			<span><button type="button" class="bd_base_btns bs_focusNone" id="deleteBtn">삭제하기</button></span>
 		</div>
 	</article>
 </section>

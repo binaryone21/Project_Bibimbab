@@ -37,8 +37,8 @@ public class BoardService {
 	}
 	
 	/* 입력한 Board 정보를 수정 */
-	public int updateBoard() {
-		return bdDao.updateBoard();
+	public boolean updateBoard(BoardVO boardVO) {
+		return bdDao.updateBoard(boardVO) > 0;
 	}
 	
 	/* 선택한 Board 정보를 삭제 */
