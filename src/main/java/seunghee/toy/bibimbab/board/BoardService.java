@@ -18,9 +18,6 @@ public class BoardService {
 	/* 해당하는 조건의 Board List 조회 */
 	public List<BoardVO> listVOBoard(String searchType, String searchText, String pageNO) {
 		Map<String, String> param = new HashMap<>();
-		System.out.println(pageNO);
-		System.out.println((Integer.valueOf(pageNO)));
-		System.out.println((Integer.parseInt(pageNO)));
 		String startNO = String.valueOf((Integer.parseInt(pageNO)-1)*10);
 		param.put("searchType", searchType);
 		param.put("searchText", searchText);
