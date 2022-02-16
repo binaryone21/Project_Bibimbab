@@ -1,5 +1,9 @@
 <%@ page pageEncoding="UTF-8" %>
-<!-- 기타 상담 수정 -->
+
+<!-- BoardWirte 페이지 JavaScript 설정 -->
+<script src="/js/board/boardWrite.js" defer></script>
+
+<!-- 기타 상담 추가 -->
 <section class="bs_body">
 
 	<!-- 상단 배너 -->
@@ -21,41 +25,42 @@
 	<article class="bd_view">
 	
 		<!-- 상담 상세보기 테이블 -->
-		<div>
+		<form id="bd_insert_form">
 			<table class="bd_view_table">
 				<colgroup>
 					<col style="width:100px">
-					<col style="width:610px">
+					<col style="width:470px">
 					<col style="width:100px">
 					<col style="width:150px">
-					<col style="width:180px">
+					<col style="width:240px">
+					<col style="width:80px">
 					<col style="width:60px">
 				</colgroup>
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" id="TITLE"/></td>
+						<td><input type="text" name="TITLE" id="bd_write_title" style="width:450px"></td>
 						<th>Writer</th>
-						<td><input type="text" id="REG_ID"/></td>
-						<th>Secret NO.</th>
-						<td><input type="text" id="SECRET_NO"/></td>
+						<td><input type="text" name="REG_ID" id="bd_write_writer" style="width:130px"></td>
+						<th>Pass Word (4자리)</th>
+						<td><input type="text" name="SECRET_NO" id="bd_write_password" style="width:60px; text-align:center" placeholder="0000"></td>
+						<td></td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="4" id="content">
-							<input type="text" id="" style="width:100%; height:480px;"/>
-							<!-- <textarea rows="10"></textarea> -->
+						<td colspan="5">
+							<textarea name="CONTENTS" id="bd_write_content" cols="136" rows="19"></textarea>
 						</td>
 						<td></td>
 					</tr>		 
 				</tbody>
 			</table>
-		</div>
+		</form>
 		
 		<!-- 상담 업데이트 버튼 -->
 		<div class="bd_base_right">
 			<span><input type="text" class="bd_write_insertId" id="SECRET_NO"></span>
-			<span><button type="button" class="bd_base_btns bs_focusNone" id="boardWriteOK">등록하기</button></span>
+			<span><button type="button" class="bd_base_btns bs_focusNone" id="writeOkBtn">등록하기</button></span>
 		</div>
 	</article>
 </section>

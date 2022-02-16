@@ -7,6 +7,9 @@
 .bs_focusNone:focus {
 	outline: none;
 }
+input {
+	margin-right : 0px;
+}
 
 /* 배너 */
 .bs_banner {

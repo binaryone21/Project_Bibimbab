@@ -51,7 +51,7 @@
 	
 	// 검색조건을 통한 BoardList 조회
 	function searchList() {
-		location.href = '/board/list?searchType="'+$('#searchType').val()+'"&searchText="'+$('#searchText').val()+'"&pageNO="'+boardSearch.pageNO+'"';
+		location.href = '/board/list?searchType='+$('#searchType').val()+'&searchText='+$('#searchText').val()+'&pageNO='+boardSearch.pageNO;
 	}
 	
 	// BoardView 로 이동

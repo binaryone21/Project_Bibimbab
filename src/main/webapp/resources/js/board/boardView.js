@@ -1,7 +1,7 @@
 /*** Global Variable **************************************************/
 
 
-	let boardNo = getParameterByName("SEQNO")
+	let state = getParameterByName("state")
 
 
 /*** Event ************************************************************/
@@ -16,11 +16,16 @@
 
 /*** Function *********************************************************/
 
+	// 페이지 로딩시
+	$(document).ready(function() {
+		// 업로드 에러 메시지 출력
+		if(state === "errorUpdate") { alert("업로드 실패") }
+	});
 
 	// 기타상담 수정하기
 	function boardUpdate() {
 		if($('#bd_secretNo').val() === $('#bd_userNo').val()) {
-			location.href = "/board/update?SEQNO=" + boardNo
+			location.href = "/board/update?SEQNO=" + $('#bd_SEQNO').val()
 		} else {
 			alert("비밀번호를 다시 확인해주세요")
 		}

@@ -95,7 +95,8 @@
 }
 .bd_view_table th {
 	font-size: 25px;
-	text-align: center;
+	text-align: left;
+	padding-left: 20px;
 }
 .bd_view_table td {
 	padding: 10px;
@@ -114,7 +115,10 @@
 
 
 
-/* 기타 상담 Write */
+
+
+
+/*  write 에서 password 로 쓰였던 것 */
 .bd_write_insertId {
 	border: 2px solid #BA131A;
 	border-radius : 8px;
@@ -122,13 +126,4 @@
 	padding: 2px 10px;
 	marign-right: -3px;
 	width: 100px;
-}
-
-/* 기타 상담 Update */
-.bd_view_header input {
-	width : 450px;
-	margin-right : 0px;
-}
-.bd_view_content textarea {
-
 }

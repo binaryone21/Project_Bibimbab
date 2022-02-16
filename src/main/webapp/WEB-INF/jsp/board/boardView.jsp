@@ -58,6 +58,7 @@
 					</tr>
 				</tbody>
 			</table>
+			<input type="hidden" id="bd_SEQNO" value=${bdOne.SEQNO}>
 			<input type="hidden" id="bd_secretNo" value=${bdOne.SECRET_NO}>
 		</div>
 		

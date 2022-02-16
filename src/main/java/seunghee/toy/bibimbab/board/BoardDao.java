@@ -25,16 +25,19 @@ public class BoardDao {
 		return sqlSession.selectOne("bdMap.selectBoard", SEQNO);
 	}
 
+	/* 입력한 Board 정보를 추가 */
 	public int insertBoard(BoardVO boardVO) {
 		return sqlSession.insert("bdMap.insertBoard", boardVO);
 	}
 	
+	/* 선택한 Board 정보를 수정 */
 	public int updateBoard(BoardVO boardVO) {
 		return sqlSession.update("bdMap.updateBoard", boardVO);
 	}
 	
-	public int deleteBoard() {
-		return sqlSession.update("bdMap.deleteBoard");
+	/* 선택한 Board 정보를 삭제 */
+	public int deleteBoard(String SEQNO) {
+		return sqlSession.update("bdMap.deleteBoard", SEQNO);
 	}
 
 	/* List - 해당하는 조건의 Board 갯수를 Count */

@@ -47,10 +47,12 @@ public class BoardController {
 	
 	/* 기타상담 추가완료 */
 	@RequestMapping("/writeOK")
-	public ModelAndView boardWriteOK(ModelAndView mv, BoardVO boardVO) {
-		mv.setViewName("board/boardList.tiles");
-		mv.addObject("bdOne", bdSer.insertBoard(boardVO));
-		return mv;
+	public String boardWriteOK(BoardVO boardVO) {
+		if(bdSer.insertBoard(boardVO)) {
+			return "redirect:/board/list?pageNO=1";
+		} else {
+			return "redirect:/board/write?state=errorWrite";
+		}
 	}
 	
 	/* 기타상담 수정하기 */
@@ -68,15 +70,18 @@ public class BoardController {
 		if(bdSer.updateBoard(boardVO)) {
 			return "redirect:/board/view?SEQNO=" + boardVO.getSEQNO();
 		} else {
-			return "redirect:/board/update?SEQNO=" + boardVO.getSEQNO() + "&state=error";
+			return "redirect:/board/update?SEQNO=" + boardVO.getSEQNO() + "&state=errorUpdate";
 		}
 	}
 	
 	/* 기타상담 삭제하기 */
 	@RequestMapping("/delete")
-	public String boardDelete(String CP, String SEQNO) {
-		bdSer.deleteBoard();
-		return "board/boardDelete.tiles";
+	public String boardDelete(String SEQNO) {
+		if(bdSer.deleteBoard(SEQNO)) {
+			return "redirect:/board/list?pageNO=1";
+		} else {
+			return "redirect:/board/view?SEQNO=" + SEQNO + "&state=errorDelete";
+		}
 	}
 	
 	// 컨트롤러에서 파라미터 받으려면 ?? 되나??

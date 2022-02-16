@@ -18,6 +18,9 @@ public class BoardService {
 	/* 해당하는 조건의 Board List 조회 */
 	public List<BoardVO> listVOBoard(String searchType, String searchText, String pageNO) {
 		Map<String, String> param = new HashMap<>();
+		System.out.println(pageNO);
+		System.out.println((Integer.valueOf(pageNO)));
+		System.out.println((Integer.parseInt(pageNO)));
 		String startNO = String.valueOf((Integer.parseInt(pageNO)-1)*10);
 		param.put("searchType", searchType);
 		param.put("searchText", searchText);
@@ -32,8 +35,8 @@ public class BoardService {
 	}
 
 	/* 입력한 Board 정보를 추가 */
-	public int insertBoard(BoardVO boardVO) {
-		return bdDao.insertBoard(boardVO);
+	public boolean insertBoard(BoardVO boardVO) {
+		return bdDao.insertBoard(boardVO) > 0;
 	}
 	
 	/* 입력한 Board 정보를 수정 */
@@ -42,8 +45,8 @@ public class BoardService {
 	}
 	
 	/* 선택한 Board 정보를 삭제 */
-	public int deleteBoard() {
-		return bdDao.deleteBoard();
+	public boolean deleteBoard(String SEQNO) {
+		return bdDao.deleteBoard(SEQNO) > 0;
 	}
 	
 	/* List - 해당하는 조건의 Board 갯수를 Count */

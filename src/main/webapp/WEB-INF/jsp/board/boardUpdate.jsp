@@ -43,7 +43,7 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" name="TITLE" value="${bdOne.TITLE}"></td>
+						<td><input type="text" name="TITLE" value="${bdOne.TITLE}" style="width:450px"></td>
 						<th>Writer</th>
 						<td>${bdOne.REG_ID}</td>
 						<th>Date</th>
@@ -60,7 +60,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<input type="hidden" name="SEQNO" id="bd_update_SEQNO">
+			<input type="hidden" name="SEQNO" value=${bdOne.SEQNO}>
 		</form>
 		
 		<!-- 상담 업데이트 버튼 -->
