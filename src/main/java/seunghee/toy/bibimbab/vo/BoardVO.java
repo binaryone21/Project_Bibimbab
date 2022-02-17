@@ -3,84 +3,84 @@ package seunghee.toy.bibimbab.vo;
 public class BoardVO {
 	
 	// Variable
-	private String SEQNO;			// 글 번호
-	private String TITLE;			// 제목
-	private String CONTENTS;		// 내용
-	private String REG_ID;			// 작성자
-	private String REG_DATE;		// 작성일
-	private String VISIT;			// 방문수
-	private String DEL_YN;			// 삭제여부
-	private String SECRET_NO;		// 등록 비밀번호
+	private String TOC_PK;			// 글 번호
+	private String TOC_TITLE;			// 제목
+	private String TOC_CONTENTS;		// 내용
+	private String TOC_REG_ID;			// 작성자
+	private String TOC_REG_DATE;		// 작성일
+	private String TOC_VISIT;			// 방문수
+	private String TOC_DEL_YN;			// 삭제여부
+	private String TOC_PASSWD;		// 등록 비밀번호
 
 	// Constructor
 	public BoardVO() { }
 	
-	public BoardVO(String SEQNO, String TITLE, String REG_ID, String REG_DATE, String VISIT) {
-		this.SEQNO = SEQNO;
-		this.TITLE = TITLE;
-		this.REG_ID = REG_ID;
-		this.REG_DATE = REG_DATE;
-		this.VISIT = VISIT;
+	public BoardVO(String TOC_PK, String TOC_TITLE, String TOC_REG_ID, String TOC_REG_DATE, String TOC_VISIT) {
+		this.TOC_PK = TOC_PK;
+		this.TOC_TITLE = TOC_TITLE;
+		this.TOC_REG_ID = TOC_REG_ID;
+		this.TOC_REG_DATE = TOC_REG_DATE;
+		this.TOC_VISIT = TOC_VISIT;
 	}
 	
-	public BoardVO(String SEQNO, String TITLE, String CONTENTS, String REG_ID, String REG_DATE, String VISIT, String DEL_YN, String SECRET_NO) {
-		this.SEQNO = SEQNO;
-		this.TITLE = TITLE;
-		this.CONTENTS = CONTENTS;
-		this.REG_ID = REG_ID;
-		this.REG_DATE = REG_DATE;
-		this.VISIT = VISIT;
-		this.DEL_YN = DEL_YN;
-		this.SECRET_NO = SECRET_NO;
+	public BoardVO(String TOC_PK, String TOC_TITLE, String TOC_CONTENTS, String TOC_REG_ID, String TOC_REG_DATE, String TOC_VISIT, String TOC_DEL_YN, String TOC_PASSWD) {
+		this.TOC_PK = TOC_PK;
+		this.TOC_TITLE = TOC_TITLE;
+		this.TOC_CONTENTS = TOC_CONTENTS;
+		this.TOC_REG_ID = TOC_REG_ID;
+		this.TOC_REG_DATE = TOC_REG_DATE;
+		this.TOC_VISIT = TOC_VISIT;
+		this.TOC_DEL_YN = TOC_DEL_YN;
+		this.TOC_PASSWD = TOC_PASSWD;
 	}
 	
 	// Getter and Setter
-	public String getSECRET_NO() {
-		return SECRET_NO;
+	public String getTOC_PASSWD() {
+		return TOC_PASSWD;
 	}
-	public void setSECRET_NO(String sECRET_NO) {
-		SECRET_NO = sECRET_NO;
+	public void setTOC_PASSWD(String TOC_PASSWD) {
+		this.TOC_PASSWD = TOC_PASSWD;
 	}
-	public String getDEL_YN() {
-		return DEL_YN;
+	public String getTOC_DEL_YN() {
+		return TOC_DEL_YN;
 	}
-	public void setDEL_YN(String dEL_YN) {
-		DEL_YN = dEL_YN;
+	public void setTOC_DEL_YN(String TOC_DEL_YN) {
+		this.TOC_DEL_YN = TOC_DEL_YN;
 	}
-	public String getSEQNO() {
-		return SEQNO;
+	public String getTOC_PK() {
+		return TOC_PK;
 	}
-	public void setSEQNO(String sEQNO) {
-		SEQNO = sEQNO;
+	public void setTOC_PK(String TOC_PK) {
+		this.TOC_PK = TOC_PK;
 	}
-	public String getTITLE() {
-		return TITLE;
+	public String getTOC_TITLE() {
+		return TOC_TITLE;
 	}
-	public void setTITLE(String tITLE) {
-		TITLE = tITLE;
+	public void setTOC_TITLE(String TOC_TITLE) {
+		this.TOC_TITLE = TOC_TITLE;
 	}
-	public String getCONTENTS() {
-		return CONTENTS;
+	public String getTOC_CONTENTS() {
+		return TOC_CONTENTS;
 	}
-	public void setCONTENTS(String cONTENTS) {
-		CONTENTS = cONTENTS;
+	public void setTOC_CONTENTS(String TOC_CONTENTS) {
+		this.TOC_CONTENTS = TOC_CONTENTS;
 	}
-	public String getREG_ID() {
-		return REG_ID;
+	public String getTOC_REG_ID() {
+		return TOC_REG_ID;
 	}
-	public void setREG_ID(String rEG_ID) {
-		REG_ID = rEG_ID;
+	public void setTOC_REG_ID(String TOC_REG_ID) {
+		this.TOC_REG_ID = TOC_REG_ID;
 	}
-	public String getREG_DATE() {
-		return REG_DATE;
+	public String getTOC_REG_DATE() {
+		return TOC_REG_DATE;
 	}
-	public void setREG_DATE(String rEG_DATE) {
-		REG_DATE = rEG_DATE;
+	public void setTOC_REG_DATE(String TOC_REG_DATE) {
+		this.TOC_REG_DATE = TOC_REG_DATE;
 	}
-	public String getVISIT() {
-		return VISIT;
+	public String getTOC_VISIT() {
+		return TOC_VISIT;
 	}
-	public void setVISIT(String vISIT) {
-		VISIT = vISIT;
+	public void setTOC_VISIT(String TOC_VISIT) {
+		this.TOC_VISIT = TOC_VISIT;
 	}
 }

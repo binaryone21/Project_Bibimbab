@@ -25,9 +25,9 @@
 		// 유효성 검사
 		if(!checkBoardData()) { return }
 
-		$('#bd_insert_form').attr('action', '/board/writeOK')
-		$('#bd_insert_form').attr('method', 'post')
-		$('#bd_insert_form').submit()
+		$('#bd_write_form').attr('action', '/board/writeOK')
+		$('#bd_write_form').attr('method', 'post')
+		$('#bd_write_form').submit()
 	}
 
 	// 기타상담 유효성 검사

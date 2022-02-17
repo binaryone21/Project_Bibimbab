@@ -21,8 +21,8 @@ public class BoardDao {
 	} 
 	
 	/* 선택한 Board 정보를 조회 */
-	public BoardVO selectBoard(String SEQNO) {
-		return sqlSession.selectOne("bdMap.selectBoard", SEQNO);
+	public BoardVO selectBoard(String TOC_PK) {
+		return sqlSession.selectOne("bdMap.selectBoard", TOC_PK);
 	}
 
 	/* 입력한 Board 정보를 추가 */
@@ -36,8 +36,8 @@ public class BoardDao {
 	}
 	
 	/* 선택한 Board 정보를 삭제 */
-	public int deleteBoard(String SEQNO) {
-		return sqlSession.update("bdMap.deleteBoard", SEQNO);
+	public int deleteBoard(String TOC_PK) {
+		return sqlSession.update("bdMap.deleteBoard", TOC_PK);
 	}
 
 	/* List - 해당하는 조건의 Board 갯수를 Count */
@@ -46,8 +46,8 @@ public class BoardDao {
 	}
 	
 	/* View - 선택한 Board 정보에 조회수 증가 */
-	public int updateBoardVisitPlus(String SEQNO) {
-		return sqlSession.update("bdMap.updateBoardVisitPlus", SEQNO);
+	public int updateBoardVisitPlus(String TOC_PK) {
+		return sqlSession.update("bdMap.updateBoardVisitPlus", TOC_PK);
 	}
 	
 }

@@ -26,9 +26,9 @@ public class BoardService {
 	}
 	
 	/* 선택한 Board 정보를 조회 */
-	public BoardVO selectBoard(String SEQNO) {
-		updateBoardVisitPlus(SEQNO);
-		return bdDao.selectBoard(SEQNO);
+	public BoardVO selectBoard(String TOC_PK) {
+		updateBoardVisitPlus(TOC_PK);
+		return bdDao.selectBoard(TOC_PK);
 	}
 
 	/* 입력한 Board 정보를 추가 */
@@ -42,8 +42,8 @@ public class BoardService {
 	}
 	
 	/* 선택한 Board 정보를 삭제 */
-	public boolean deleteBoard(String SEQNO) {
-		return bdDao.deleteBoard(SEQNO) > 0;
+	public boolean deleteBoard(String TOC_PK) {
+		return bdDao.deleteBoard(TOC_PK) > 0;
 	}
 	
 	/* List - 해당하는 조건의 Board 갯수를 Count */
@@ -56,8 +56,8 @@ public class BoardService {
 	
 	
 	/* View - 선택한 Board 정보에 조회수 증가 */
-	public int updateBoardVisitPlus(String SEQNO) {
-		return bdDao.updateBoardVisitPlus(SEQNO);
+	public int updateBoardVisitPlus(String TOC_PK) {
+		return bdDao.updateBoardVisitPlus(TOC_PK);
 	}
 	
 }

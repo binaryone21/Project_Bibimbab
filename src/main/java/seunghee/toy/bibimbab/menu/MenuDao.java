@@ -13,7 +13,7 @@ public class MenuDao {
 	SqlSession sqlSession;
 
 	/* 해당하는 조건의 Menu List 조회 */
-	public List<StoreVO> listVOMenu(String KIND) {
-		return sqlSession.selectList("mnMap.listVOMenu", KIND);
+	public List<StoreVO> listVOMenu(String TMI_KIND) {
+		return sqlSession.selectList("mnMap.listVOMenu", TMI_KIND);
 	}
 }

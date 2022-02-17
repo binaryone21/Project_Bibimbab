@@ -38,7 +38,7 @@
 			<c:forEach var="stOneBM" items="${stListBM}">
 				<div class="st_baeminItem">
 					<img src="/img/store/baeminIcon.png">
-					<span>${stOneBM.AREA}</span>
+					<span>${stOneBM.TSI_AREA}</span>
 				</div>
 			</c:forEach>
 		</div>
@@ -55,7 +55,7 @@
 		<c:forEach var="stOneYGY" items="${stListYGY}">
 			<div class="st_yogiyoItem">
 				<img src="/img/store/yogiyoIcon.png">
-				<span>${stOneYGY.AREA}</span>
+				<span>${stOneYGY.TSI_AREA}</span>
 			</div>
 		</c:forEach>
 		</div>

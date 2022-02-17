@@ -43,28 +43,28 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td>${bdOne.TITLE}</td>
+						<td>${bdOne.TOC_TITLE}</td>
 						<th>Writer</th>
-						<td>${bdOne.REG_ID}</td>
+						<td>${bdOne.TOC_REG_ID}</td>
 						<th>Date</th>
-						<td>${bdOne.REG_DATE}</td>
+						<td>${bdOne.TOC_REG_DATE}</td>
 						<th>Visit</th>
-						<td>${bdOne.VISIT}</td>
+						<td>${bdOne.TOC_VISIT}</td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6">${bdOne.CONTENTS}</td>
+						<td colspan="6">${bdOne.TOC_CONTENTS}</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="hidden" id="bd_SEQNO" value=${bdOne.SEQNO}>
-			<input type="hidden" id="bd_secretNo" value=${bdOne.SECRET_NO}>
+			<input type="hidden" id="TOC_PK" value=${bdOne.TOC_PK}>
+			<input type="hidden" id="TOC_PASSWD" value=${bdOne.TOC_PASSWD}>
 		</div>
 		
 		<!-- 상담 상세보기 버튼 -->
 		<div class="bd_base_right">
-			<span><input type="text" id="bd_userNo"></span>
+			<span><input type="text" id="bd_view_passwd"></span>
 			<span><button type="button" class="bd_base_btns bs_focusNone" id="updateBtn">수정하기</button></span>
 			<span><button type="button" class="bd_base_btns bs_focusNone" id="deleteBtn">삭제하기</button></span>
 		</div>

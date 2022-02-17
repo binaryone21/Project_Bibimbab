@@ -1,5 +1,9 @@
 /*** Global Variable **************************************************/
 
+	let searchType 	= getParameterByName("searchType");
+	let searchText 	= getParameterByName("searchText");
+	let pageNO 		= getParameterByName("pageNO");
+
 	var boardSearch = { };	// 검색 조건 객체
 
 
@@ -21,42 +25,51 @@
 	// 페이지 로딩시
 	$(document).ready(function() {
 		// 검색 조건 객체화
-		setBoardSearch();
+		setBoardNavi();
 		
 	});
-	
-	// 검색 조건 객체 선언
-	function setBoardSearch() {
-		
-		let searchType 	= getParameterByName("searchType");
-		let searchText 	= getParameterByName("searchText");
+
+	// 네비게이션 설정
+	function setBoardNavi() {
 		let bdCount		= $('#bdCount').val();
 		let pagePer		= 10;
-		let pageNO 		= getParameterByName("pageNO");
+		let naviBtn		= 5;
 		let pageTotal 	= Math.ceil(bdCount/pagePer);
-		let pageStart 	= ((pageNO-1)/pagePer)*10 + 1;
-		let pageEnd 		= (pageTotal >= pageStart + 9) ? pageStart + 9 : pageTotal;
-	
-		boardSearch.searchType 	= searchType;	// 검색 조건
-		boardSearch.searchText 	= searchText; 	// 검색 내용
-		boardSearch.bdCount 	= bdCount;		// 검색 조건에 해당하는 게시물 수
-		boardSearch.pagePer		= pagePer;		// 현재 페이지
-		boardSearch.pageNO		= pageNO; 		// 검색 조건에 해당하는 페이지 수
-		boardSearch.pageTotal	= pageTotal; 	// 페이지당 보여줄 게시물
-		boardSearch.pageStart	= pageStart; 	// 페이지 네비게이션 첫 숫자
-		boardSearch.pageEnd 	= pageEnd; 		// 페이지 네비게이션 마지막 숫자
-		
-		console.log("검색조건 객체생성 boardSearch : ", boardSearch);
+		let pageStart 	= Math.floor((pageNO-1)/naviBtn)*naviBtn + 1;
+		let pageEnd 	= (pageTotal >= pageStart + naviBtn - 1) ? pageStart + naviBtn - 1 : pageTotal;
+		let listNavis 	= document.querySelectorAll('.bd_list_navi > div')
+		let url = '/board/list?searchType=' + searchType + '&searchText=' + searchText + '&pageNO='
+
+		for(let i=0; i<=pageEnd-pageStart; i++) {
+			listNavis[i+1].innerHTML = pageStart + i
+			listNavis[i+1].addEventListener('click', () => { location.href = url + (pageStart + i) })
+			if(pageNO == pageStart + i) {
+				listNavis[i+1].setAttribute( 'class', 'bd_list_naviAct')
+			}
+		}
+		for(let i=pageEnd-pageStart + 1; i<naviBtn; i++) {
+			listNavis[i + 1].style.backgroundColor = '#EEEEEE'
+		}
+
+		if(pageStart != 1) {
+			listNavis[0].addEventListener('click', () => { location.href = url + (pageStart - naviBtn)})
+		}
+		if(pageStart + naviBtn -1 == pageEnd) {
+			listNavis[6].addEventListener('click', () => { location.href = url + (pageStart + naviBtn)})
+		}
+
+
+		console.log(listNavis)
 	}
 	
 	// 검색조건을 통한 BoardList 조회
 	function searchList() {
-		location.href = '/board/list?searchType='+$('#searchType').val()+'&searchText='+$('#searchText').val()+'&pageNO='+boardSearch.pageNO;
+		location.href = '/board/list?searchType='+$('#searchType').val()+'&searchText='+$('#searchText').val()+'&pageNO=1'
 	}
 	
 	// BoardView 로 이동
 	function goView() {
-		location.href = '/board/view?SEQNO="'+$(this).find('.js_bdSEQNO').text()+'"';
+		location.href = '/board/view?TOC_PK="'+$(this).find('.js_bdOne_TOC_PK').text()+'"';
 	}
 	
 	// BoardWrite 로 이동

@@ -25,7 +25,7 @@
 	<article class="bd_view">
 	
 		<!-- 상담 상세보기 테이블 -->
-		<form id="bd_insert_form">
+		<form id="bd_write_form">
 			<table class="bd_view_table">
 				<colgroup>
 					<col style="width:100px">
@@ -39,17 +39,17 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" name="TITLE" id="bd_write_title" style="width:450px"></td>
+						<td><input type="text" name="TOC_TITLE" id="bd_write_title" style="width:450px"></td>
 						<th>Writer</th>
-						<td><input type="text" name="REG_ID" id="bd_write_writer" style="width:130px"></td>
+						<td><input type="text" name="TOC_REG_ID" id="bd_write_writer" style="width:130px"></td>
 						<th>Pass Word (4자리)</th>
-						<td><input type="text" name="SECRET_NO" id="bd_write_password" style="width:60px; text-align:center" placeholder="0000"></td>
+						<td><input type="text" name="TOC_PASSWD" id="bd_write_password" style="width:60px; text-align:center" placeholder="0000"></td>
 						<td></td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
 						<td colspan="5">
-							<textarea name="CONTENTS" id="bd_write_content" cols="136" rows="19"></textarea>
+							<textarea name="TOC_CONTENTS" id="bd_write_content" cols="136" rows="19"></textarea>
 						</td>
 						<td></td>
 					</tr>		 
@@ -59,7 +59,7 @@
 		
 		<!-- 상담 업데이트 버튼 -->
 		<div class="bd_base_right">
-			<span><input type="text" class="bd_write_insertId" id="SECRET_NO"></span>
+			<span><input type="text" class="bd_write_insertId" id="bd_write_passwd"></span>
 			<span><button type="button" class="bd_base_btns bs_focusNone" id="writeOkBtn">등록하기</button></span>
 		</div>
 	</article>

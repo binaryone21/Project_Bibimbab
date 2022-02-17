@@ -24,8 +24,8 @@
 
 	// 기타상담 수정하기
 	function boardUpdate() {
-		if($('#bd_secretNo').val() === $('#bd_userNo').val()) {
-			location.href = "/board/update?SEQNO=" + $('#bd_SEQNO').val()
+		if($('#TOC_PASSWD').val() === $('#bd_view_passwd').val()) {
+			location.href = "/board/update?TOC_PK=" + $('#TOC_PK').val()
 		} else {
 			alert("비밀번호를 다시 확인해주세요")
 		}
@@ -33,8 +33,8 @@
 
 	// 기타상담 삭제하기
 	function boardDelete() {
-		if($('#bd_secretNo').val() === $('#bd_userNo').val()) {
-			location.href = "/board/delete?SEQNO=" + boardNo
+		if($('#TOC_PASSWD').val() === $('#bd_view_passwd').val()) {
+			location.href = "/board/delete?TOC_PK=" + $('#TOC_PK').val()
 		} else {
 			alert("비밀번호를 다시 확인해주세요")
 		}

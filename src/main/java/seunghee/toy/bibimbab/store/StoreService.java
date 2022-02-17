@@ -14,7 +14,7 @@ public class StoreService {
 	private StoreDao stDao;
 	
 	/* 해당하는 조건의 Store List 조회 */
-	public List<StoreVO> listVOStore(String BRAND) {
-		return stDao.listVOStore(BRAND);
+	public List<StoreVO> listVOStore(String TSI_BRAND) {
+		return stDao.listVOStore(TSI_BRAND);
 	}
 }

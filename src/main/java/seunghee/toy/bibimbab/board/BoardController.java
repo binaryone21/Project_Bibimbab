@@ -17,6 +17,8 @@ import seunghee.toy.bibimbab.vo.BoardVO;
 @Controller
 public class BoardController {
 
+	// voList, select, update, delete, insert
+
 	@Autowired
 	private BoardService bdSer;
 	
@@ -32,9 +34,9 @@ public class BoardController {
 	
 	/* 기타상담 상세보기 */
 	@RequestMapping(value="/view", method=RequestMethod.GET)
-	public ModelAndView boardView(String SEQNO) {
+	public ModelAndView boardView(String TOC_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
+		mv.addObject("bdOne", bdSer.selectBoard(TOC_PK));
 		mv.setViewName("board/boardView.tiles");
 		return mv;
 	}
@@ -57,9 +59,9 @@ public class BoardController {
 	
 	/* 기타상담 수정하기 */
 	@RequestMapping("/update")
-	public ModelAndView boardUpdate(String CP, String SEQNO) {
+	public ModelAndView boardUpdate(String TOC_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(SEQNO));
+		mv.addObject("bdOne", bdSer.selectBoard(TOC_PK));
 		mv.setViewName("board/boardUpdate.tiles");
 		return mv;
 	}
@@ -68,19 +70,19 @@ public class BoardController {
 	@RequestMapping("/updateOK")
 	public String boardUpdateOK(BoardVO boardVO) {
 		if(bdSer.updateBoard(boardVO)) {
-			return "redirect:/board/view?SEQNO=" + boardVO.getSEQNO();
+			return "redirect:/board/view?TOC_PK=" + boardVO.getTOC_PK();
 		} else {
-			return "redirect:/board/update?SEQNO=" + boardVO.getSEQNO() + "&state=errorUpdate";
+			return "redirect:/board/update?TOC_PK=" + boardVO.getTOC_PK() + "&state=errorUpdate";
 		}
 	}
 	
 	/* 기타상담 삭제하기 */
 	@RequestMapping("/delete")
-	public String boardDelete(String SEQNO) {
-		if(bdSer.deleteBoard(SEQNO)) {
+	public String boardDelete(String TOC_PK) {
+		if(bdSer.deleteBoard(TOC_PK)) {
 			return "redirect:/board/list?pageNO=1";
 		} else {
-			return "redirect:/board/view?SEQNO=" + SEQNO + "&state=errorDelete";
+			return "redirect:/board/view?TOC_PK=" + TOC_PK + "&state=errorDelete";
 		}
 	}
 	

@@ -5,6 +5,7 @@
 
 <!-- BoardList 페이지 JavaScript 설정 -->
 <script src="/js/board/boardList.js" defer></script>
+
 <!-- BoardList 페이지 변수 설정 -->
 <input type="hidden" id="bdCount" value="${bdCount}">
 
@@ -65,11 +66,11 @@
 					</tr>
 					<c:forEach var="bdOne" items="${bdList}">
 						<tr class="js_bdOne">
-							<td class="js_bdSEQNO">${bdOne.SEQNO}</td>
-							<td>${bdOne.TITLE}</td>
-							<td>${bdOne.REG_ID}</td>
-							<td>${bdOne.REG_DATE}</td>
-							<td>${bdOne.VISIT}</td>
+							<td class="js_bdOne_TOC_PK">${bdOne.TOC_PK}</td>
+							<td>${bdOne.TOC_TITLE}</td>
+							<td>${bdOne.TOC_REG_ID}</td>
+							<td>${bdOne.TOC_REG_DATE}</td>
+							<td>${bdOne.TOC_VISIT}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -83,11 +84,13 @@
 		
 		<!-- 상담 리스트 네비게이션 -->
 		<div class="bd_list_navi">
-			<div class="bd_list_naviAct">1</div>
-			<div>2</div>
-			<div>3</div>
-			<div>4</div>
-			<div>5</div>
+			<div><</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div>></div>
 		</div>
 	</article>
 </section>

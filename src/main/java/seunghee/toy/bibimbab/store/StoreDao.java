@@ -14,7 +14,7 @@ public class StoreDao {
 	SqlSession sqlSession;
 
 	/* 해당하는 조건의 Store List 조회 */
-	public List<StoreVO> listVOStore(String BRAND) {
-		return sqlSession.selectList("stMap.listVOStore", BRAND);
+	public List<StoreVO> listVOStore(String TSI_BRAND) {
+		return sqlSession.selectList("stMap.listVOStore", TSI_BRAND);
 	}
 }

@@ -3,98 +3,97 @@ package seunghee.toy.bibimbab.vo;
 public class StoreVO {
 
 	// Variable
-	private String SEQNO;		// 매장 번호
-	private String AREA1;		// 시
-	private String AREA2;		// 구 
-	private String AREA3;		// 동
-	private String AREA;		// 시 구 동
-	private String REG_DATE;	// 작성일
-	private String DEL_YN;		// 삭제여부
-	private String BRAND;		// 브랜드
+	private String TSI_PK;		// 매장 번호
+	private String TSI_AREA1;		// 시
+	private String TSI_AREA2;		// 구 
+	private String TSI_AREA3;		// 동
+	private String TSI_AREA;		// 시 구 동
+	private String TSI_REG_DATE;	// 작성일
+	private String TSI_DEL_YN;		// 삭제여부
+	private String TSI_BRAND;		// 브랜드
 	
 	// Constructor
 	public StoreVO() { }
 	
-	public StoreVO(String SEQNO, String AREA, String BRAND) {
-		this.SEQNO = SEQNO;
-		this.AREA = AREA;
-		this.BRAND = BRAND;
+	public StoreVO(String TSI_PK, String TSI_AREA, String TSI_BRAND) {
+		this.TSI_PK = TSI_PK;
+		this.TSI_AREA = TSI_AREA;
+		this.TSI_BRAND = TSI_BRAND;
 	}
 
-	public StoreVO(String SEQNO, String AREA1, String AREA2, String AREA3, String AREA, String REG_DATE, String DEL_YN, String BRAND) {
-		this.SEQNO = SEQNO;
-		this.AREA1 = AREA1;
-		this.AREA2 = AREA2;
-		this.AREA3 = AREA3;
-		this.AREA = AREA;
-		this.REG_DATE = REG_DATE;
-		this.DEL_YN = DEL_YN;
-		this.BRAND = BRAND;
+	public StoreVO(String TSI_PK, String TSI_AREA1, String TSI_AREA2, String TSI_AREA3, String TSI_AREA, String TSI_REG_DATE, String TSI_DEL_YN, String TSI_BRAND) {
+		this.TSI_PK = TSI_PK;
+		this.TSI_AREA1 = TSI_AREA1;
+		this.TSI_AREA2 = TSI_AREA2;
+		this.TSI_AREA3 = TSI_AREA3;
+		this.TSI_AREA = TSI_AREA;
+		this.TSI_REG_DATE = TSI_REG_DATE;
+		this.TSI_DEL_YN = TSI_DEL_YN;
+		this.TSI_BRAND = TSI_BRAND;
 	}
 
 	// Getter and Setter
-	public String getSEQNO() {
-		return SEQNO;
+	public String getTSI_PK() {
+		return TSI_PK;
 	}
 
-	public void setSEQNO(String sEQNO) {
-		SEQNO = sEQNO;
+	public void setTSI_PK(String TSI_PK) {
+		this.TSI_PK = TSI_PK;
 	}
 
-	public String getAREA1() {
-		return AREA1;
+	public String getTSI_AREA1() {
+		return TSI_AREA1;
 	}
 
-	public void setAREA1(String aREA1) {
-		AREA1 = aREA1;
+	public void setTSI_AREA1(String TSI_AREA1) {
+		this.TSI_AREA1 = TSI_AREA1;
 	}
 
-	public String getAREA2() {
-		return AREA2;
+	public String getTSI_AREA2() {
+		return TSI_AREA2;
 	}
 
-	public void setAREA2(String aREA2) {
-		AREA2 = aREA2;
+	public void setTSI_AREA2(String TSI_AREA2) {
+		this.TSI_AREA2 = TSI_AREA2;
 	}
 
-	public String getAREA3() {
-		return AREA3;
+	public String getTSI_AREA3() {
+		return TSI_AREA3;
 	}
 
-	public void setAREA3(String aREA3) {
-		AREA3 = aREA3;
+	public void setTSI_AREA3(String TSI_AREA3) {
+		this.TSI_AREA3 = TSI_AREA3;
 	}
 
-	public String getAREA() {
-		return AREA;
+	public String getTSI_AREA() {
+		return TSI_AREA;
 	}
 	
-	public void setAREA(String aREA) {
-		AREA = aREA;
+	public void setAREA(String TSI_AREA) {
+		this.TSI_AREA = TSI_AREA;
 	}
 	
-	public String getREG_DATE() {
-		return REG_DATE;
+	public String getTSI_REG_DATE() {
+		return TSI_REG_DATE;
 	}
 
-	public void setREG_DATE(String rEG_DATE) {
-		REG_DATE = rEG_DATE;
+	public void setTSI_REG_DATE(String TSI_REG_DATE) {
+		this.TSI_REG_DATE = TSI_REG_DATE;
 	}
 
-	public String getDEL_YN() {
-		return DEL_YN;
+	public String getTSI_DEL_YN() {
+		return TSI_DEL_YN;
 	}
 
-	public void setDEL_YN(String dEL_YN) {
-		DEL_YN = dEL_YN;
+	public void setTSI_DEL_YN(String TSI_DEL_YN) {
+		this.TSI_DEL_YN = TSI_DEL_YN;
 	}
 
-	public String getBRAND() {
-		return BRAND;
+	public String getTSI_BRAND() {
+		return TSI_BRAND;
 	}
 
-	public void setBRAND(String bRAND) {
-		BRAND = bRAND;
+	public void setTSI_BRAND(String TSI_BRAND) {
+		this.TSI_BRAND = TSI_BRAND;
 	}
-
 }
