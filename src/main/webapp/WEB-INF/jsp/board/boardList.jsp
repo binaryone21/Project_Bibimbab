@@ -66,11 +66,11 @@
 					</tr>
 					<c:forEach var="bdOne" items="${bdList}">
 						<tr class="js_bdOne">
-							<td class="js_bdOne_TOC_PK">${bdOne.TOC_PK}</td>
-							<td>${bdOne.TOC_TITLE}</td>
-							<td>${bdOne.TOC_REG_ID}</td>
-							<td>${bdOne.TOC_REG_DATE}</td>
-							<td>${bdOne.TOC_VISIT}</td>
+							<td class="js_bdOne_TB_PK">${bdOne.TB_PK}</td>
+							<td>${bdOne.TB_TITLE}</td>
+							<td>${bdOne.TB_REG_ID}</td>
+							<td>${bdOne.TB_REG_DATE}</td>
+							<td>${bdOne.TB_VISIT}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -94,6 +94,3 @@
 		</div>
 	</article>
 </section>
-
-<!-- Board List 페이지 js 설정 -->
-<script src="/js/board/boardList.js" defer></script>

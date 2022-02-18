@@ -36,8 +36,8 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneBBB" items="${mnListBBB}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneBBB.TMI_IMG}"></div>
-					<div>${mnOneBBB.TMI_NAME}</div>
+					<div><img src="${mnOneBBB.TM_IMG}"></div>
+					<div>${mnOneBBB.TM_NAME}</div>
 				</div>
 			</c:forEach>
 		</div>
@@ -49,8 +49,8 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneJS" items="${mnListJS}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneJS.TMI_IMG}"></div>
-					<div>${mnOneJS.TMI_NAME}</div>
+					<div><img src="${mnOneJS.TM_IMG}"></div>
+					<div>${mnOneJS.TM_NAME}</div>
 				</div>
 			</c:forEach>
 		</div>
@@ -62,8 +62,8 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneDB" items="${mnListDB}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneDB.TMI_IMG}"></div>
-					<div>${mnOneDB.TMI_NAME}</div>
+					<div><img src="${mnOneDB.TM_IMG}"></div>
+					<div>${mnOneDB.TM_NAME}</div>
 				</div>
 			</c:forEach>				
 		</div>
@@ -75,8 +75,8 @@
 		<div class="mn_menuLists">
 			<c:forEach var="mnOneDGS" items="${mnListDGS}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneDGS.TMI_IMG}"></div>
-					<div>${mnOneDGS.TMI_NAME}</div>
+					<div><img src="${mnOneDGS.TM_IMG}"></div>
+					<div>${mnOneDGS.TM_NAME}</div>
 				</div>
 			</c:forEach>	
 		</div>

@@ -1,14 +1,14 @@
 /*** Global Variable **************************************************/
 
 
-	let state = getParameterByName("state")
+	let state = getParameterByName("state")	// 현재 상태를 나타내는 변수
 
 
 /*** Event ************************************************************/
 
 
 	// 기타상담 수정완료
-	$('#writeOkBtn').on('click', boardDataWrite)
+	$('#writeOkBtn').on('click', boardWriteOk)
 
 
 /*** Function *********************************************************/
@@ -20,15 +20,16 @@
 		if(state === "errorWrite") { alert("업로드 실패") }
 	});
 
+
 	// 기타상담 수정완료
-	function boardDataWrite() {
-		// 유효성 검사
-		if(!checkBoardData()) { return }
+	function boardWriteOk() {
+		if(!checkBoardData()) { return }	// 유효성 검사
 
 		$('#bd_write_form').attr('action', '/board/writeOK')
 		$('#bd_write_form').attr('method', 'post')
 		$('#bd_write_form').submit()
 	}
+
 
 	// 기타상담 유효성 검사
 	function checkBoardData() {

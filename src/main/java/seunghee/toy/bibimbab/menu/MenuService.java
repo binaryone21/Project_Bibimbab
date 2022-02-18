@@ -12,7 +12,7 @@ public class MenuService {
 	private MenuDao menuDao;
 	
 	/* 해당하는 조건의 Menu List 조회 */
-	public List<StoreVO> listVOMenu(String TMI_KIND) {
-		return menuDao.listVOMenu(TMI_KIND);
+	public List<StoreVO> voListMenu(String TMI_KIND) {
+		return menuDao.voListMenu(TMI_KIND);
 	}
 }

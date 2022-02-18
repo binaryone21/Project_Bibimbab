@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
 
-<!-- BoardWirte 페이지 JavaScript 설정 -->
+<!-- BoardWrite 페이지 JavaScript 설정 -->
 <script src="/js/board/boardWrite.js" defer></script>
 
 <!-- 기타 상담 추가 -->
@@ -39,17 +39,17 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" name="TOC_TITLE" id="bd_write_title" style="width:450px"></td>
+						<td><input type="text" name="TB_TITLE" id="bd_write_title" style="width:450px"></td>
 						<th>Writer</th>
-						<td><input type="text" name="TOC_REG_ID" id="bd_write_writer" style="width:130px"></td>
+						<td><input type="text" name="TB_REG_ID" id="bd_write_writer" style="width:130px"></td>
 						<th>Pass Word (4자리)</th>
-						<td><input type="text" name="TOC_PASSWD" id="bd_write_password" style="width:60px; text-align:center" placeholder="0000"></td>
+						<td><input type="text" name="TB_PASSWD" id="bd_write_password" style="width:60px; text-align:center" placeholder="0000"></td>
 						<td></td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
 						<td colspan="5">
-							<textarea name="TOC_CONTENTS" id="bd_write_content" cols="136" rows="19"></textarea>
+							<textarea name="TB_CONTENTS" id="bd_write_content"></textarea>
 						</td>
 						<td></td>
 					</tr>		 

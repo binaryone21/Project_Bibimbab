@@ -16,13 +16,23 @@ public class BoardDao {
 	private SqlSession sqlSession;
 
 	/* 해당하는 조건의 Board List 조회 */
-	public List<BoardVO> listVOBoard(Map<String, String> param) {
-		return sqlSession.selectList("bdMap.listVOBoard", param);
-	} 
+	public List<BoardVO> voListBoard(Map<String, String> param) {
+		return sqlSession.selectList("bdMap.voListBoard", param);
+	}
+
+	/* 해당하는 조건의 Board List 개수 */
+	public String selectBoard_PK_Count(Map<String, String> param) {
+		return sqlSession.selectOne("bdMap.selectBoard_PK_Count", param);
+	}
 	
 	/* 선택한 Board 정보를 조회 */
 	public BoardVO selectBoard(String TOC_PK) {
 		return sqlSession.selectOne("bdMap.selectBoard", TOC_PK);
+	}
+
+	/* 선택한 Board 정보에 조회수 증가 */
+	public int updateBoard_Visit_Plus(String TOC_PK) {
+		return sqlSession.update("bdMap.updateBoard_Visit_Plus", TOC_PK);
 	}
 
 	/* 입력한 Board 정보를 추가 */
@@ -39,15 +49,4 @@ public class BoardDao {
 	public int deleteBoard(String TOC_PK) {
 		return sqlSession.update("bdMap.deleteBoard", TOC_PK);
 	}
-
-	/* List - 해당하는 조건의 Board 갯수를 Count */
-	public String selectBoardSeqnoCount(Map<String, String> param) {
-		return sqlSession.selectOne("bdMap.selectBoardSeqnoCount", param);
-	}
-	
-	/* View - 선택한 Board 정보에 조회수 증가 */
-	public int updateBoardVisitPlus(String TOC_PK) {
-		return sqlSession.update("bdMap.updateBoardVisitPlus", TOC_PK);
-	}
-	
 }

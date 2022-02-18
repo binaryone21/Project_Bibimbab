@@ -43,24 +43,24 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td><input type="text" name="TOC_TITLE" value="${bdOne.TOC_TITLE}" style="width:450px"></td>
+						<td><input type="text" name="TB_TITLE" value="${bdOne.TB_TITLE}" style="width:450px"></td>
 						<th>Writer</th>
-						<td>${bdOne.TOC_REG_ID}</td>
+						<td>${bdOne.TB_REG_ID}</td>
 						<th>Date</th>
-						<td>${bdOne.TOC_REG_DATE}</td>
+						<td>${bdOne.TB_REG_DATE}</td>
 						<th>Visit</th>
-						<td>${bdOne.TOC_VISIT}</td>
+						<td>${bdOne.TB_VISIT}</td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
 						<td colspan="6">
-							<textarea name="TOC_CONTENTS" cols="136" rows="19">${bdOne.TOC_CONTENTS}</textarea>
+							<textarea name="TB_CONTENTS" cols="136" rows="19">${bdOne.TB_CONTENTS}</textarea>
 						</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="hidden" name="TOC_PK" value=${bdOne.TOC_PK}>
+			<input type="hidden" name="TB_PK" value=${bdOne.TB_PK}>
 		</form>
 		
 		<!-- 상담 업데이트 버튼 -->

@@ -1,14 +1,14 @@
 /*** Global Variable **************************************************/
 
 
-	let state = getParameterByName("state")
+	let state = getParameterByName("state")	// 현재 상태를 나타내는 변수
 
 
 /*** Event ************************************************************/
 
 
 	// 기타상담 수정완료
-	$('#updateOkBtn').on('click', setBoardData)
+	$('#updateOkBtn').on('click', boardUpdateOk)
 
 
 /*** Function *********************************************************/
@@ -20,15 +20,16 @@
 		if(state === "errorUpdate") { alert("업로드 실패") }
 	});
 
+
 	// 기타상담 수정완료
-	function setBoardData() {
-		// 유효성 검사
-		if(!checkBoardData()) { return }
+	function boardUpdateOk() {
+		if(!checkBoardData()) { return }	// 유효성 검사
 
 		$('#bd_update_form').attr('action', '/board/updateOK')
 		$('#bd_update_form').attr('method', 'post')
 		$('#bd_update_form').submit()
 	}
+
 
 	// 기타상담 유효성 검사
 	function checkBoardData() {

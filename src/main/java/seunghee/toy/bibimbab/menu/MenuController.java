@@ -13,12 +13,12 @@ public class MenuController {
 	
 	@RequestMapping("/menu")
 	public ModelAndView menu() {
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("mnListBBB", 	mnSer.listVOMenu("1"));
-		mav.addObject("mnListJS", 	mnSer.listVOMenu("2"));
-		mav.addObject("mnListDB", 	mnSer.listVOMenu("3"));
-		mav.addObject("mnListDGS", 	mnSer.listVOMenu("4"));
-		mav.setViewName("menu/menu.tiles");
-		return mav;
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("mnListBBB", 	mnSer.voListMenu("1"));	// 비빔밥 메뉴 정보
+		mv.addObject("mnListJS", 	mnSer.voListMenu("2"));	// 정식 메뉴 정보
+		mv.addObject("mnListDB", 	mnSer.voListMenu("3"));	// 덮밥 메뉴 정보
+		mv.addObject("mnListDGS", 	mnSer.voListMenu("4"));	// 돈까스 메뉴 정도
+		mv.setViewName("menu/menu.tiles");
+		return mv;
 	}
 }

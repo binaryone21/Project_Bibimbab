@@ -13,10 +13,10 @@ public class StoreController {
 	
 	@RequestMapping("/store")
 	public ModelAndView store() {
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("stListBM", stSer.listVOStore("1"));
-		mav.addObject("stListYGY", stSer.listVOStore("2"));
-		mav.setViewName("store/store.tiles");
-		return mav;
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("stListBM", stSer.voListStore("1"));	// 배달의 민족 매장정보
+		mv.addObject("stListYGY", stSer.voListStore("2"));	// 요기요 매장정보
+		mv.setViewName("store/store.tiles");
+		return mv;
 	}
 }

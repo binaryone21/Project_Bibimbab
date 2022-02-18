@@ -3,87 +3,87 @@ package seunghee.toy.bibimbab.vo;
 public class MenuVO {
 
 	// Variable
-	private String TMI_PK;			// 매장 번호
-	private String TMI_KIND;		// 메뉴 종류
-	private String TMI_IMG;			// 이미지 경로
-	private String TMI_NAME;		// 메뉴 명
-	private String TMI_PRICE;		// 메뉴 가격
-	private String TMI_REG_DATE;	// 출시 일
-	private String TMI_DEL_YN;		// 삭제여부
+	private String TM_PK;			// 매장 번호
+	private String TM_KIND;		// 메뉴 종류
+	private String TM_IMG;			// 이미지 경로
+	private String TM_NAME;		// 메뉴 명
+	private String TM_PRICE;		// 메뉴 가격
+	private String TM_REG_DATE;	// 출시 일
+	private String TM_DEL_YN;		// 삭제여부
 	
 	// Constructor
 	public MenuVO() { }
 	
-	public MenuVO(String TMI_PK, String TMI_IMG, String TMI_NAME) {
-		this.TMI_PK = TMI_PK;
-		this.TMI_IMG = TMI_IMG;
-		this.TMI_NAME = TMI_NAME;
+	public MenuVO(String TM_PK, String TM_IMG, String TM_NAME) {
+		this.TM_PK = TM_PK;
+		this.TM_IMG = TM_IMG;
+		this.TM_NAME = TM_NAME;
 	}
 
-	public MenuVO(String TMI_PK, String TMI_KIND, String TMI_IMG, String TMI_NAME, String TMI_PRICE, String TMI_REG_DATE, String TMI_DEL_YN) {
-		this.TMI_PK = TMI_PK;
-		this.TMI_KIND = TMI_KIND;
-		this.TMI_IMG = TMI_IMG;
-		this.TMI_NAME = TMI_NAME;
-		this.TMI_PRICE = TMI_PRICE;
-		this.TMI_REG_DATE = TMI_REG_DATE;
-		this.TMI_DEL_YN = TMI_DEL_YN;
+	public MenuVO(String TM_PK, String TM_KIND, String TM_IMG, String TM_NAME, String TM_PRICE, String TM_REG_DATE, String TM_DEL_YN) {
+		this.TM_PK = TM_PK;
+		this.TM_KIND = TM_KIND;
+		this.TM_IMG = TM_IMG;
+		this.TM_NAME = TM_NAME;
+		this.TM_PRICE = TM_PRICE;
+		this.TM_REG_DATE = TM_REG_DATE;
+		this.TM_DEL_YN = TM_DEL_YN;
 	}
 
 	// Getter and Setter
-	public String getTMI_PK() {
-		return TMI_PK;
+	public String getTM_PK() {
+		return TM_PK;
 	}
 
-	public void setTMI_PK(String TMI_PK) {
-		this.TMI_PK = TMI_PK;
+	public void setTM_PK(String TM_PK) {
+		this.TM_PK = TM_PK;
 	}
 
-	public String getTMI_KIND() {
-		return TMI_KIND;
+	public String getTM_KIND() {
+		return TM_KIND;
 	}
 
-	public void setTMI_KIND(String TMI_KIND) {
-		this.TMI_KIND = TMI_KIND;
+	public void setTM_KIND(String TM_KIND) {
+		this.TM_KIND = TM_KIND;
 	}
 
-	public String getTMI_IMG() {
-		return TMI_IMG;
+	public String getTM_IMG() {
+		return TM_IMG;
 	}
 
-	public void setTMI_IMG(String TMI_IMG) {
-		this.TMI_IMG = TMI_IMG;
+	public void setTM_IMG(String TM_IMG) {
+		this.TM_IMG = TM_IMG;
 	}
 
-	public String getTMI_NAME() {
-		return TMI_NAME;
+	public String getTM_NAME() {
+		return TM_NAME;
 	}
 
-	public void setTMI_NAME(String TMI_NAME) {
-		this.TMI_NAME = TMI_NAME;
+	public void setTM_NAME(String TM_NAME) {
+		this.TM_NAME = TM_NAME;
 	}
 
-	public String getTMI_PRICE() {
-		return TMI_PRICE;
+	public String getTM_PRICE() {
+		return TM_PRICE;
 	}
 
-	public void setTMI_PRICE(String TMI_PRICE) {
-		this.TMI_PRICE = TMI_PRICE;
+	public void setTM_PRICE(String TM_PRICE) {
+		this.TM_PRICE = TM_PRICE;
 	}
 
-	public String getTMI_REG_DATE() {
-		return TMI_REG_DATE;
+	public String getTM_REG_DATE() {
+		return TM_REG_DATE;
 	}
 
-	public void setTMI_REG_DATE(String TMI_REG_DATE) {
-		this.TMI_REG_DATE = TMI_REG_DATE;
+	public void setTM_REG_DATE(String TM_REG_DATE) {
+		this.TM_REG_DATE = TM_REG_DATE;
 	}
 
-	public String getTMI_DEL_YN() {
-		return TMI_DEL_YN;
+	public String getTM_DEL_YN() {
+		return TM_DEL_YN;
 	}
 
-	public void setTMI_DEL_YN(String TMI_DEL_YN) {
-		this.TMI_DEL_YN = TMI_DEL_YN;
+	public void setTM_DEL_YN(String TM_DEL_YN) {
+		this.TM_DEL_YN = TM_DEL_YN;
 	}
 }

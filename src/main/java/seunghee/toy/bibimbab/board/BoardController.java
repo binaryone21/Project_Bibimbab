@@ -17,26 +17,24 @@ import seunghee.toy.bibimbab.vo.BoardVO;
 @Controller
 public class BoardController {
 
-	// voList, select, update, delete, insert
-
 	@Autowired
 	private BoardService bdSer;
 	
-	/* 기타상담 목록	*/
+	/* 기타상담 목록조회	*/
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView boardList(String searchType, String searchText, String pageNO) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdList",  bdSer.listVOBoard(searchType, searchText, pageNO));
-		mv.addObject("bdCount", bdSer.selectBoardSeqnoCount(searchType, searchText));
+		mv.addObject("bdList",  bdSer.voListBoard(searchType, searchText, pageNO));		// 해당하는 조건의 Board List 조회
+		mv.addObject("bdCount", bdSer.selectBoard_PK_Count(searchType, searchText));	// 해당하는 조건의 Board List 개수
 		mv.setViewName("board/boardList.tiles");
 		return mv;
 	}
 	
 	/* 기타상담 상세보기 */
 	@RequestMapping(value="/view", method=RequestMethod.GET)
-	public ModelAndView boardView(String TOC_PK) {
+	public ModelAndView boardView(String TB_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(TOC_PK));
+		mv.addObject("bdOne", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
 		mv.setViewName("board/boardView.tiles");
 		return mv;
 	}
@@ -50,7 +48,7 @@ public class BoardController {
 	/* 기타상담 추가완료 */
 	@RequestMapping("/writeOK")
 	public String boardWriteOK(BoardVO boardVO) {
-		if(bdSer.insertBoard(boardVO)) {
+		if(bdSer.insertBoard(boardVO)) {								// 입력한 Board 정보를 추가
 			return "redirect:/board/list?pageNO=1";
 		} else {
 			return "redirect:/board/write?state=errorWrite";
@@ -59,9 +57,9 @@ public class BoardController {
 	
 	/* 기타상담 수정하기 */
 	@RequestMapping("/update")
-	public ModelAndView boardUpdate(String TOC_PK) {
+	public ModelAndView boardUpdate(String TB_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(TOC_PK));
+		mv.addObject("bdOne", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
 		mv.setViewName("board/boardUpdate.tiles");
 		return mv;
 	}
@@ -69,28 +67,20 @@ public class BoardController {
 	/* 기타상담 수정완료 */
 	@RequestMapping("/updateOK")
 	public String boardUpdateOK(BoardVO boardVO) {
-		if(bdSer.updateBoard(boardVO)) {
-			return "redirect:/board/view?TOC_PK=" + boardVO.getTOC_PK();
+		if(bdSer.updateBoard(boardVO)) {								// 입력한 Board 정보를 수정
+			return "redirect:/board/view?TB_PK=" + boardVO.getTB_PK();
 		} else {
-			return "redirect:/board/update?TOC_PK=" + boardVO.getTOC_PK() + "&state=errorUpdate";
+			return "redirect:/board/update?TB_PK=" + boardVO.getTB_PK() + "&state=errorUpdate";
 		}
 	}
 	
 	/* 기타상담 삭제하기 */
 	@RequestMapping("/delete")
-	public String boardDelete(String TOC_PK) {
-		if(bdSer.deleteBoard(TOC_PK)) {
+	public String boardDelete(String TB_PK) {
+		if(bdSer.deleteBoard(TB_PK)) {									// 선택한 Board 정보를 삭제
 			return "redirect:/board/list?pageNO=1";
 		} else {
-			return "redirect:/board/view?TOC_PK=" + TOC_PK + "&state=errorDelete";
+			return "redirect:/board/view?TB_PK=" + TB_PK + "&state=errorDelete";
 		}
-	}
-	
-	// 컨트롤러에서 파라미터 받으려면 ?? 되나??
-	@ResponseBody
-	@RequestMapping("/sampleSample")
-	public String sample(HttpServletRequest request, HttpServletResponse response) {
-		String param = ServletRequestUtils.getStringParameter(request, "pageNO", "");
-		return param;
 	}
 }

@@ -112,7 +112,11 @@
 	border-bottom: 2px solid #BA131A;
 	overflow: hidden;
 }
-
+.bd_view_content textarea {
+	width:1020px;
+	height:475px;
+	resize:none;
+}
 
 
 
