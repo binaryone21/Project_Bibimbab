@@ -1,18 +1,10 @@
 package seunghee.toy.bibimbab.menu;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import seunghee.toy.bibimbab.vo.StoreVO;
 
-@Service
-public class MenuService {
+import java.util.List;
 
-	@Autowired
-	private MenuDao menuDao;
-	
-	/* 해당하는 조건의 Menu List 조회 */
-	public List<StoreVO> voListMenu(String TMI_KIND) {
-		return menuDao.voListMenu(TMI_KIND);
-	}
+public interface MenuService {
+    /* 해당하는 조건의 Menu List 조회 */
+    List<StoreVO> voListMenu(String TMI_KIND);
 }

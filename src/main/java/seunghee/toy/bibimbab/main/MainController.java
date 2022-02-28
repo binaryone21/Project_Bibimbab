@@ -9,7 +9,7 @@ public class MainController {
 
 	
 	@Autowired
-	private MainService mainService;
+	private MainService miSer;
 	
 	@RequestMapping("/") // 여기가 메인 페이지입니다.
 	public String main() {

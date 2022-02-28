@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BrandController {
 
 	@Autowired
-	private BrandService brandService;
+	private BrandService brSer;
 	
 	@RequestMapping("/brand")
 	public String brand() {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mnMap">
+
+	<!-- 해당하는 조건의 Menu List 조회 -->
+	<select id="voListMenu" statementType="PREPARED" parameterType="String" resultType="seunghee.toy.bibimbab.vo.MenuVO">
+		select
+			TM_PK,
+			TM_IMG,
+			TM_NAME
+				from BIBIMBAB.T_MENU
+					where TM_DEL_YN = 'N'
+						and TM_KIND = ${value}
+	</select>
+</mapper>

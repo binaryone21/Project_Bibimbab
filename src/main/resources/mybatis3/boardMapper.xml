@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bdMap">
+
+	<!-- 해당하는 조건의 Board List 조회 -->
+	<select id="voListBoard" statementType="PREPARED" parameterType="Map" resultType="seunghee.toy.bibimbab.vo.BoardVO">
+		select
+			TB_PK,
+			TB_TITLE,
+			TB_REG_ID,
+		    date_format(TB_REG_DATE, '%T') as "TB_REG_TIME",
+			date_format(TB_REG_DATE, '%Y. %m. %d') as "TB_REG_DATE",
+			TB_VISIT
+				from BIBIMBAB.T_BOARD
+					where TB_DEL_YN = "N"
+					<if test="searchType == 'TITLE' and searchText != '' and searchText != null">
+				    	and TB_TITLE like '%${searchText}%'
+				    </if>
+					<if test="searchType == 'CONTENTS' and searchText != '' and searchText != null">
+				    	and TB_CONTENTS like '%${searchText}%'
+				    </if>
+					<if test="searchType == 'ALL' and searchText != '' and searchText != null">
+						and (TB_TITLE like '%${searchText}%' or TB_CONTENTS like '%${searchText}%')
+					</if>
+							order by TB_REG_DATE desc, TB_REG_TIME desc, TB_PK desc
+										limit ${startNO}, 10
+	</select>
+
+	<!-- 해당하는 조건의 Board List 개수 -->
+	<select id="selectBoard_PK_Count" statementType="PREPARED" parameterType="Map" resultType="String">
+		select count(TB_PK) from BIBIMBAB.T_BOARD
+		where TB_DEL_YN = "N"
+		<if test="searchType == 'TITLE' and searchText != '' and searchText != null">
+			and TB_TITLE like '%${searchText}%'
+		</if>
+		<if test="searchType == 'CONTENTS' and searchText != '' and searchText != null">
+			and TB_CONTENTS like '%${searchText}%'
+		</if>
+		<if test="searchType == 'ALL' and searchText != '' and searchText != null">
+			and (TB_TITLE like '%${searchText}%' or TB_CONTENTS like '%${searchText}%')
+		</if>
+	</select>
+
+	<!-- 선택한 Board 정보를 조회 -->
+	<select id="selectBoard" statementType="PREPARED" parameterType="String" resultType="seunghee.toy.bibimbab.vo.BoardVO">
+		select
+			TB_PK,
+			TB_TITLE,
+			TB_CONTENTS,
+			TB_REG_ID,
+			date_format(TB_REG_DATE, '%Y. %m. %d') as "TB_REG_DATE",
+			TB_VISIT,
+			TB_PASSWD
+				from BIBIMBAB.T_BOARD
+					where TB_PK = ${value}
+	</select>
+
+	<!-- 선택한 Board 정보에 조회수 증가 -->
+	<update id="updateBoard_Visit_Plus" statementType="PREPARED" parameterType="String">
+		update BIBIMBAB.T_BOARD set
+			TB_VISIT = TB_VISIT + 1
+		where TB_PK = ${value}
+	</update>
+
+	<!-- 입력한 Board 정보를 수정 -->
+	<insert id="insertBoard" statementType="PREPARED" parameterType="seunghee.toy.bibimbab.vo.BoardVO">
+		insert into BIBIMBAB.T_BOARD (
+				TB_TITLE,
+				TB_CONTENTS,
+				TB_REG_ID,
+				TB_PASSWD
+			) values (
+				'${TB_TITLE}',
+				'${TB_CONTENTS}',
+				'${TB_REG_ID}',
+				'${TB_PASSWD}'
+			)
+	</insert>
+
+	<!-- 선택한 Board 정보를 수정 -->
+	<update id="updateBoard" statementType="PREPARED" parameterType="seunghee.toy.bibimbab.vo.BoardVO">
+		update BIBIMBAB.T_BOARD set
+			TB_TITLE = '${TB_TITLE}',
+			TB_CONTENTS = '${TB_CONTENTS}'
+				where TB_PK = ${TB_PK}
+	</update>
+
+	<!-- 선택한 Board 정보를 삭제 -->
+	<update id="deleteBoard" statementType="PREPARED" parameterType="java.lang.String">
+		update BIBIMBAB.T_BOARD set
+			TB_DEL_YN = 'Y'
+				where TB_PK = ${TB_PK}
+	</update>
+</mapper>

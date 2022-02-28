@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CompanyController {
 	
 	@Autowired
-	private CompanyService companyService;
+	private CompanyService cpSer;
 	
 	@RequestMapping("/company")
 	public String company() {

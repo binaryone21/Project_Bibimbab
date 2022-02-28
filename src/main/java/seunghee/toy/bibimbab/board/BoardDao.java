@@ -1,52 +1,29 @@
 package seunghee.toy.bibimbab.board;
 
+import seunghee.toy.bibimbab.vo.BoardVO;
+
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+public interface BoardDao {
+    /* 해당하는 조건의 Board List 조회 */
+    List<BoardVO> voListBoard(Map<String, String> param);
 
-import seunghee.toy.bibimbab.vo.BoardVO;
+    /* 해당하는 조건의 Board List 개수 */
+    String selectBoard_PK_Count(Map<String, String> param);
 
-@Repository
-public class BoardDao {
+    /* 선택한 Board 정보를 조회 */
+    BoardVO selectBoard(String TOC_PK);
 
-	@Autowired
-	private SqlSession sqlSession;
+    /* 선택한 Board 정보에 조회수 증가 */
+    int updateBoard_Visit_Plus(String TOC_PK);
 
-	/* 해당하는 조건의 Board List 조회 */
-	public List<BoardVO> voListBoard(Map<String, String> param) {
-		return sqlSession.selectList("bdMap.voListBoard", param);
-	}
+    /* 입력한 Board 정보를 추가 */
+    int insertBoard(BoardVO boardVO);
 
-	/* 해당하는 조건의 Board List 개수 */
-	public String selectBoard_PK_Count(Map<String, String> param) {
-		return sqlSession.selectOne("bdMap.selectBoard_PK_Count", param);
-	}
-	
-	/* 선택한 Board 정보를 조회 */
-	public BoardVO selectBoard(String TOC_PK) {
-		return sqlSession.selectOne("bdMap.selectBoard", TOC_PK);
-	}
+    /* 선택한 Board 정보를 수정 */
+    int updateBoard(BoardVO boardVO);
 
-	/* 선택한 Board 정보에 조회수 증가 */
-	public int updateBoard_Visit_Plus(String TOC_PK) {
-		return sqlSession.update("bdMap.updateBoard_Visit_Plus", TOC_PK);
-	}
-
-	/* 입력한 Board 정보를 추가 */
-	public int insertBoard(BoardVO boardVO) {
-		return sqlSession.insert("bdMap.insertBoard", boardVO);
-	}
-	
-	/* 선택한 Board 정보를 수정 */
-	public int updateBoard(BoardVO boardVO) {
-		return sqlSession.update("bdMap.updateBoard", boardVO);
-	}
-	
-	/* 선택한 Board 정보를 삭제 */
-	public int deleteBoard(String TOC_PK) {
-		return sqlSession.update("bdMap.deleteBoard", TOC_PK);
-	}
+    /* 선택한 Board 정보를 삭제 */
+    int deleteBoard(String TOC_PK);
 }

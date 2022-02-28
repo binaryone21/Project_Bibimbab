@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stMap">
+
+	<!-- 해당하는 조건의 Store List 조회 -->
+	<select id="voListStore" statementType="PREPARED" parameterType="String" resultType="seunghee.toy.bibimbab.vo.StoreVO">
+		select
+			TS_PK,
+			CONCAT(TS_AREA1, ' ', TS_AREA2, ' ', TS_AREA3) as "TS_AREA",
+			TS_BRAND
+				from BIBIMBAB.T_STORE
+					where TS_DEL_YN = 'N'
+						and TS_BRAND = ${value}
+	</select>
+</mapper>
