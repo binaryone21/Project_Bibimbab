@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface StoreDao {
     /* 해당하는 조건의 Store List 조회 */
-    List<StoreVO> voListStore(String TSI_BRAND);
+    List<StoreVO> voListStore(String TS_BRAND);
 }

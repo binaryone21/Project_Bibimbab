@@ -19,8 +19,8 @@ public class BoardController {
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView boardList(String searchType, String searchText, String pageNO) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdList",  bdSer.voListBoard(searchType, searchText, pageNO));		// 해당하는 조건의 Board List 조회
-		mv.addObject("bdCount", bdSer.selectBoard_PK_Count(searchType, searchText));	// 해당하는 조건의 Board List 개수
+		mv.addObject("TB_List",  bdSer.voListBoard(searchType, searchText, pageNO));		// 해당하는 조건의 Board List 조회
+		mv.addObject("TB_PK_Count", bdSer.selectBoard_PK_Count(searchType, searchText));	// 해당하는 조건의 Board List 개수
 		mv.setViewName("board/boardList.tiles");
 		return mv;
 	}
@@ -29,7 +29,7 @@ public class BoardController {
 	@RequestMapping(value="/view", method=RequestMethod.GET)
 	public ModelAndView boardView(String TB_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
+		mv.addObject("TB_One", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
 		mv.setViewName("board/boardView.tiles");
 		return mv;
 	}
@@ -54,7 +54,7 @@ public class BoardController {
 	@RequestMapping("/update")
 	public ModelAndView boardUpdate(String TB_PK) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("bdOne", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
+		mv.addObject("TB_One", bdSer.selectBoard(TB_PK));	// 선택한 Board 정보를 조회
 		mv.setViewName("board/boardUpdate.tiles");
 		return mv;
 	}

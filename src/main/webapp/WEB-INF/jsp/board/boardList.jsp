@@ -7,7 +7,7 @@
 <script src="/js/board/boardList.js" defer></script>
 
 <!-- BoardList 페이지 변수 설정 -->
-<input type="hidden" id="bdCount" value="${bdCount}">
+<input type="hidden" id="bdCount" value="${TB_PK_Count}">
 
 <!-- 기타 상담 목록 -->
 <section class="bs_body">
@@ -32,7 +32,7 @@
 	
 		<!-- 상담 리스트 검색 -->
 		<div class="bd_list_search">
-			<span class="bd_list_searchTotal">Total. ${bdCount}</span>
+			<span class="bd_list_searchTotal">Total. ${TB_PK_Count}</span>
 			<div class="bd_base_right">
 				<span>
 					<select id="searchType" class="bd_list_searchType bs_focusNone">
@@ -64,13 +64,13 @@
 						<th>Date</th>
 						<th>Visit</th>
 					</tr>
-					<c:forEach var="bdOne" items="${bdList}">
+					<c:forEach var="TB_One" items="${TB_List}">
 						<tr class="js_bdOne">
-							<td class="js_bdOne_TB_PK">${bdOne.TB_PK}</td>
-							<td>${bdOne.TB_TITLE}</td>
-							<td>${bdOne.TB_REG_ID}</td>
-							<td>${bdOne.TB_REG_DATE}</td>
-							<td>${bdOne.TB_VISIT}</td>
+							<td class="js_bdOne_TB_PK">${TB_One.TB_PK}</td>
+							<td>${TB_One.TB_TITLE}</td>
+							<td>${TB_One.TB_REG_ID}</td>
+							<td>${TB_One.TB_REG_DATE}</td>
+							<td>${TB_One.TB_VISIT}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

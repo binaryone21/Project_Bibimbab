@@ -15,7 +15,7 @@ public class StoreDaoImpl implements StoreDao {
 
 	/* 해당하는 조건의 Store List 조회 */
 	@Override
-	public List<StoreVO> voListStore(String TSI_BRAND) {
-		return sqlSession.selectList("stMap.voListStore", TSI_BRAND);
+	public List<StoreVO> voListStore(String TS_BRAND) {
+		return sqlSession.selectList("stMap.voListStore", TS_BRAND);
 	}
 }

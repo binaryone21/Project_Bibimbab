@@ -35,10 +35,10 @@
 			(배달앱 바로가기는 모바일에서만 가능합니다)
 		</div>
 		<div class="st_baeminStore">
-			<c:forEach var="stOneBM" items="${stListBM}">
+			<c:forEach var="TS_One_BRAND_1" items="${TS_List_BRAND_1}">
 				<div class="st_baeminItem">
 					<img src="/img/store/baeminIcon.png">
-					<span>${stOneBM.TS_AREA}</span>
+					<span>${TS_One_BRAND_1.TS_AREA}</span>
 				</div>
 			</c:forEach>
 		</div>
@@ -52,10 +52,10 @@
 		</div>
 		
 		<div class="st_yogiyoStore">
-		<c:forEach var="stOneYGY" items="${stListYGY}">
+		<c:forEach var="TS_One_BRAND_2" items="${TS_List_BRAND_2}">
 			<div class="st_yogiyoItem">
 				<img src="/img/store/yogiyoIcon.png">
-				<span>${stOneYGY.TS_AREA}</span>
+				<span>${TS_One_BRAND_2.TS_AREA}</span>
 			</div>
 		</c:forEach>
 		</div>

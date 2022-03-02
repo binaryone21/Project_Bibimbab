@@ -34,10 +34,10 @@
 	<article class="mn_menuList">
 		<div class="mn_menuListTitle">비빔밥</div>
 		<div class="mn_menuLists">
-			<c:forEach var="mnOneBBB" items="${mnListBBB}">
+			<c:forEach var="TM_One_KIND_1" items="${TM_List_KIND_1}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneBBB.TM_IMG}"></div>
-					<div>${mnOneBBB.TM_NAME}</div>
+					<div><img src="${TM_One_KIND_1.TM_IMG}"></div>
+					<div>${TM_One_KIND_1.TM_NAME}</div>
 				</div>
 			</c:forEach>
 		</div>
@@ -47,10 +47,10 @@
 	<article class="mn_menuList">
 		<div class="mn_menuListTitle">정식 도시락</div>
 		<div class="mn_menuLists">
-			<c:forEach var="mnOneJS" items="${mnListJS}">
+			<c:forEach var="TM_One_KIND_2" items="${TM_List_KIND_2}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneJS.TM_IMG}"></div>
-					<div>${mnOneJS.TM_NAME}</div>
+					<div><img src="${TM_One_KIND_2.TM_IMG}"></div>
+					<div>${TM_One_KIND_2.TM_NAME}</div>
 				</div>
 			</c:forEach>
 		</div>
@@ -60,10 +60,10 @@
 	<article class="mn_menuList">
 		<div class="mn_menuListTitle">덮밥 도시락</div>
 		<div class="mn_menuLists">
-			<c:forEach var="mnOneDB" items="${mnListDB}">
+			<c:forEach var="TM_One_KIND_3" items="${TM_List_KIND_3}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneDB.TM_IMG}"></div>
-					<div>${mnOneDB.TM_NAME}</div>
+					<div><img src="${TM_One_KIND_3.TM_IMG}"></div>
+					<div>${TM_One_KIND_3.TM_NAME}</div>
 				</div>
 			</c:forEach>				
 		</div>
@@ -73,10 +73,10 @@
 	<article class="mn_menuList">
 		<div class="mn_menuListTitle">돈카츠 도시락</div>
 		<div class="mn_menuLists">
-			<c:forEach var="mnOneDGS" items="${mnListDGS}">
+			<c:forEach var="TM_One_KIND_4" items="${TM_List_KIND_4}">
 				<div class="mn_menuItem">
-					<div><img src="${mnOneDGS.TM_IMG}"></div>
-					<div>${mnOneDGS.TM_NAME}</div>
+					<div><img src="${TM_One_KIND_4.TM_IMG}"></div>
+					<div>${TM_One_KIND_4.TM_NAME}</div>
 				</div>
 			</c:forEach>	
 		</div>

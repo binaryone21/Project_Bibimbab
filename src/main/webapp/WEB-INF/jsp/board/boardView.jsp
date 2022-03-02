@@ -43,23 +43,23 @@
 				<tbody>
 					<tr class="bd_view_header">
 						<th>Title</th>
-						<td>${bdOne.TB_TITLE}</td>
+						<td>${TB_One.TB_TITLE}</td>
 						<th>Writer</th>
-						<td>${bdOne.TB_REG_ID}</td>
+						<td>${TB_One.TB_REG_ID}</td>
 						<th>Date</th>
-						<td>${bdOne.TB_REG_DATE}</td>
+						<td>${TB_One.TB_REG_DATE}</td>
 						<th>Visit</th>
-						<td>${bdOne.TB_VISIT}</td>
+						<td>${TB_One.TB_VISIT}</td>
 					</tr>
 					<tr class="bd_view_content">
 						<td></td>
-						<td colspan="6">${bdOne.TB_CONTENTS}</td>
+						<td colspan="6">${TB_One.TB_CONTENTS}</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="hidden" id="TB_PK" value=${bdOne.TB_PK}>
-			<input type="hidden" id="TB_PASSWD" value=${bdOne.TB_PASSWD}>
+			<input type="hidden" id="TB_PK" value=${TB_One.TB_PK}>
+			<input type="hidden" id="TB_PASSWD" value=${TB_One.TB_PASSWD}>
 		</div>
 		
 		<!-- 상담 상세보기 버튼 -->

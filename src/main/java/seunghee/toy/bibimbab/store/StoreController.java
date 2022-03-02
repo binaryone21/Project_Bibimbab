@@ -14,8 +14,8 @@ public class StoreController {
 	@RequestMapping("/store")
 	public ModelAndView store() {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("stListBM", stSer.voListStore("1"));	// 배달의 민족 매장정보
-		mv.addObject("stListYGY", stSer.voListStore("2"));	// 요기요 매장정보
+		mv.addObject("TS_List_BRAND_1", stSer.voListStore("1"));	// 배달의 민족 매장정보
+		mv.addObject("TS_List_BRAND_2", stSer.voListStore("2"));	// 요기요 매장정보
 		mv.setViewName("store/store.tiles");
 		return mv;
 	}
