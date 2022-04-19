@@ -8,7 +8,7 @@
 
 
 	// 메인 페이지로 이동
-	$('#mainLog').on('click', () => { location.href = "/" })
+	$('#mainLogo').on('click', () => { location.href = "/" })
 	
 	// 브랜드 스토리로 이동
 	$('#naviBrand').on('click', () => { location.href = "/brand" })

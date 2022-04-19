@@ -59,7 +59,7 @@
 		
 		<!-- 상담 업데이트 버튼 -->
 		<div class="bd_base_right">
-			<span><input type="text" class="bd_write_insertId" id="bd_write_passwd"></span>
+			<%--<span><input type="text" class="bd_write_insertId" id="bd_write_passwd"></span>--%>
 			<span><button type="button" class="bd_base_btns bs_focusNone" id="writeOkBtn">등록하기</button></span>
 		</div>
 	</article>
